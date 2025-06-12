@@ -174,5 +174,15 @@ height: auto;
 
 .exemplo2 img{
   width: 700px;
+}
 
+footer {
+  background-color: #0b1d4c; /* Azul escuro */
+  color: #90A4AE;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.875rem; /* ou 14px */
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
