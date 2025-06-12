@@ -107,7 +107,10 @@ header {
   cursor: pointer;
 }
 
-
+.search-nav {
+    width: 30px;
+}
+    
 .mnr {
   position: absolute;     /* posiciona relativamente ao botão */
   top: 100%;              /* faz o menu aparecer logo abaixo do botão */
