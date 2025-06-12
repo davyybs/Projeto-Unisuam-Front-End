@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Login */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-principal: #1A237F;
+    --cor-secundária: #4FC3F7;
+    --cor-fundo: #fafafa;
+    --cor-caixa: #fafafa;
+    --sombra: #00000050;
+    --opacidade: 1;
+    --cor-login: #e6e6e6;
+    --cor-placeholder: #8c8c8c;
+    --cor-checkbox: #575757;
+    --cor-checkbox: #575757;
+    --checkbox-hover: #868686;
+    --checkbox-checked: #4CAF50;
+    --cor-submit: #2C59A7;
+    --texto-submit: #fafafa;
+    --cor-cadastro: #1a237f;
+    --cor-texto-1: #000000;
+    --cor-texto-2: #1A237F;
+    --fonte-principal: 'Poppins', sans-serif;
+}
+
+.dark-mode {
+    --cor-principal: #0f172a;
+    --cor-secundária: #172554;
+    --cor-fundo: #1d3370;
+    --cor-caixa: #FFFFFF10;
+    --sombra: #00000050;
+    --opacidade: 0.8;
+    --cor-login: #D0D2D850;
+    --cor-placeholder: #D0D2D8;
+    --cor-checkbox: #dcdcdc;
+    --checkbox-hover: #D0D2D890;
+    --checkbox-checked: #4CAF50;
+    --cor-submit: #19284c;
+    --texto-submit: #D0D2D8;
+    --cor-cadastro: #6682c5;
+    --cor-texto-1: #D0D2D8;
+    --cor-texto-2: #ededed;
+    --cor-icon: invert() grayscale(1);
+}
+
+body {
+    font-family: var(--fonte-principal);
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, var(--cor-principal), var(--cor-secundária), var(--cor-fundo));
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.logo {
+    top: 0;
+    left: 0;
+    width: 170px;
+    padding: 10px;
+    opacity: var(--opacidade);
+}
+
+.nightMode {
+    box-sizing: content-box;
+    width: 35px;
+    padding: 10px;
+    opacity: var(--opacidade);
+}
+
+#darkmode {
+    background-color: #00000000;
+    border-style: none;
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: var(--cor-caixa);
+    border-radius: 40.08px;
+    width: 505px; 
+    height: 520px;
+    box-shadow: 0px 4px 50px var(--sombra);
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 48.10px 0px 32.06px 0px;
+    gap: 10px;
+    color: var(--cor-texto-1);
+}
+
+h1 {
+    font-size: 36.072px;
+}
+
+h2 {
+    font-size: 17.64px;
+    font-weight: 500;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16.03px;
+}
+
+.loginBox {
+    border-style: none;
+    border-radius: 20px;
+    width: 376.75px;
+    height: 56.11px;
+    padding-left: 40.08px;
+    font-size: 14px;
+}
+
+.email {
+    background: var(--cor-login) url('imageinicio1.png') no-repeat center center / 16.03px 16.03px;
+    background-position: left 12.02px top 20.04px;
+}
+
+.password {
+    background: var(--cor-login) url('imageinicio2.png') no-repeat center center / 16.03px 16.03px;
+    background-position: left 12.02px top 20.04px;
+}
+
+.loginBox::placeholder {
+    color: var(--cor-placeholder);
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    width: 190px;
+    padding: 20px 0px 20px 68px;
+    gap: 15px;
+    font-size: 12.5px;
+    font-weight: bold;
+}
+
+label {
+    color: var(--cor-texto-1);
+}
+
+.checkbox {
+    display: none;
+}
+
+.custom-checkbox {
+    width: 20.04px;
+    height: 20.04px;
+    border-radius: 8.02px;
+    background-color: var(--cor-checkbox);
+    transition: background-color 0.3s;
+    position: relative;
+    cursor: pointer;
+}
+
+.custom-checkbox:hover {
+    background-color: var(--checkbox-hover);
+}
+
+
+.checkbox:checked + .custom-checkbox {
+    background: var(--checkbox-checked) url('data:image/svg+xml;utf8,<svg fill="white" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M6.173 13.127a.75.75 0 01-1.06 0l-3.24-3.24a.75.75 0 111.06-1.06l2.71 2.71 6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z"/></svg>') no-repeat center center / 15px 15px;
+}
+
+.submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.submitBox {
+    border-style: none;
+    border-radius: 20px;
+    width: 376.75px;
+    height: 56.11px;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: var(--cor-submit);
+    color: var(--texto-submit);
+}
+
+.submitBox:hover {
+    background-color: var(--cor-principal);
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.cadastro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 90px;
+    font-size: 12.5px;
+    font-weight: bold;
+    color: var(--cor-texto-1);
+}
+
+.cadastre-se {
+    color: var(--cor-principal);
+    text-decoration: none;
+    color: var(--cor-cadastro);
+}
+
+.cadastre-se:hover {
+    text-decoration: underline;
+}
+
+/* Cadastro */
+
+.cad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cadBox {
+    width: 188.375px;
+    height: 28px;
+    border-style: none;
+    border-radius: 10px;
+    padding-left: 10px;
+    background-color: var(--cor-login);
+}
+
+.cadBox::placeholder {
+    color: var(--cor-placeholder);
+}
+
+.termos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 20px 80px;
+    font-size: 9px;
+    color: #A1A1A1;
+}
+
+select {
+    color: var(--cor-placeholder);
+}
+
+.date {
+    padding-right: 10px;
+    color: var(--cor-placeholder);
+}
+
+.submitBoxCad {
+    border-style: none;
+    border-radius: 20px;
+    width: 376.75px;
+    height: 56.11px;
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: var(--cor-submit);
+    color: var(--texto-submit);
+}
+
+.submitBoxCad:hover {
+    background-color: var(--cor-principal);
+    transition: background-color 0.3s;
+    cursor: pointer;
+}

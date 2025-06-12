@@ -1,0 +1,355 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cor-principal: #1a237f;
+  --cor-secundária: #4fc3f7;
+  --cor-fundo: #fafafa;
+  --sombra: #00000025;
+  --opacidade: 1;
+  --cor-texto-1: #ffffff;
+  --cor-texto-2: #1a237f;
+  --cor-caixa: #ffffff;
+  --cor-texto-caixa: #4f585d;
+  --cor-footer: #90a4ae;
+  --fonte-principal: "Poppins", sans-serif;
+}
+
+.dark-mode {
+  --cor-principal: #0f172a;
+  --cor-secundária: #172554;
+  --cor-fundo: #1d3370;
+  --sombra: #00000050;
+  --opacidade: 0.8;
+  --cor-texto-1: #d0d2d8;
+  --cor-texto-2: #ededed;
+  --cor-texto-caixa: #bfbfc0;
+  --cor-caixa: #ffffff10;
+  --cor-icon: invert() grayscale(1);
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: var(--fonte-principal);
+}
+
+/* Header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  height: 84px;
+  padding: 25px;
+  background-color: var(--cor-principal);
+  box-shadow: 0px 4px 30px var(--sombra);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logoImage {
+  display: flex;
+  width: 160px;
+  opacity: var(--opacidade);
+}
+
+.navHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.liHeader {
+  display: inline-flex;
+  padding: 10px;
+  list-style: none;
+  font-size: 1em;
+  color: var(--cor-texto-1);
+  font-weight: bold;
+}
+
+.liHeader:hover {
+  text-decoration: underline;
+}
+
+.nightMode {
+  box-sizing: content-box;
+  width: 30px;
+  padding-right: 0px;
+  opacity: var(--opacidade);
+}
+
+#darkmode {
+  background-color: #00000000;
+  border-style: none;
+  cursor: pointer;
+}
+
+/* Slogan */
+
+.slogan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 350px;
+  padding: 40px;
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(
+    to bottom,
+    var(--cor-principal),
+    var(--cor-secundária)
+  );
+  color: var(--cor-texto-1);
+}
+
+.sloganTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+
+.sloganTitle h1 {
+  font-size: 3.6em;
+}
+
+.sloganTitle h2 {
+  width: 450px;
+  height: 105px;
+  font-size: 1.6em;
+  font-weight: normal;
+}
+
+.sloganImg {
+  opacity: var(--opacidade);
+  width: 100%;
+}
+
+/* Tecnologias */
+
+.tecnologias {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0px 60px 30px 60px;
+  background: linear-gradient(
+    to bottom,
+    var(--cor-secundária) 0%,
+    var(--cor-fundo) 15%
+  );
+}
+
+.ttPadding {
+  width: 100%;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.techTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1200px;
+  height: 76px;
+  border-radius: 30px;
+  font-size: 1.15em;
+  font-weight: bold;
+  background-color: var(--cor-caixa);
+  color: var(--cor-texto-2);
+  box-shadow: 0px 4px 20px var(--sombra);
+}
+
+.techImg {
+  filter: var(--cor-icon);
+}
+
+.items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  width: 353px;
+  height: 247px;
+  margin: 35px;
+  border-radius: 20px;
+  padding: 20px;
+  gap: 10px;
+  background-color: var(--cor-caixa);
+  box-shadow: 0px 4px 20px var(--sombra);
+}
+
+.items a {
+  text-decoration: none;
+  font-size: 1.3em;
+  color: var(--cor-texto-2);
+}
+
+.items a:hover {
+  text-decoration: underline;
+}
+
+.items span {
+  font-size: 0.9em;
+  color: var(--cor-texto-caixa);
+}
+
+.items img {
+  width: 60px;
+}
+
+#cloudImg {
+  width: 80px;
+  margin: -15px;
+}
+
+#cellphoneImg {
+  width: 60px;
+}
+
+#smsImg {
+  margin-bottom: -5px;
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background-color: var(--cor-principal);
+  color: var(--cor-footer);
+}
+
+@media screen and (max-width: 1300px) {
+  /* Header */
+
+  header {
+    padding: 15px;
+    height: 70px;
+  }
+
+  .logoImage {
+    width: 130px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .nightMode {
+    width: 25px;
+  }
+
+  /* Slogan */
+
+  .slogan {
+    gap: 0;
+    height: 230px;
+  }
+
+  .sloganTitle {
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .sloganTitle h1 {
+    text-align: center;
+    font-size: 2.3em;
+  }
+
+  .sloganTitle h2 {
+    text-align: center;
+    font-size: 1.3em;
+    width: 100%;
+    height: auto;
+  }
+
+  .sloganImg {
+    display: none;
+  }
+
+  /* Tecnologias */
+
+  .tecnologias {
+    padding: 20px 0px 0px 0px;
+    background: linear-gradient(
+      to bottom,
+      var(--cor-secundária) 0%,
+      var(--cor-fundo) 5%
+    );
+  }
+
+  .ttPadding {
+    padding: 0px 0px 10px 0px;
+  }
+
+  .techTitle {
+    width: 330px;
+    font-size: 0.83em;
+    border-radius: 20px;
+  }
+
+  .items {
+    width: 157px;
+    height: 120px;
+    gap: 0;
+    padding: 5px;
+    margin: 15px 10px;
+  }
+
+  .items a {
+    font-size: 1em;
+  }
+
+  .items img {
+    width: 40px;
+  }
+
+  #cloudImg {
+    width: 60px;
+  }
+
+  #cellphoneImg {
+    width: 40px;
+  }
+
+  .numMáscara {
+    font-size: 1.1em;
+  }
+
+  .gvc {
+    font-size: 1.05em;
+  }
+
+  .sms {
+    font-size: 1.1em;
+  }
+
+  .items span {
+    display: none;
+  }
+
+  footer {
+    height: 30px;
+    font-size: 0.75em;
+  }
+}
