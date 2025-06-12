@@ -222,7 +222,7 @@ border-radius: 8px;
 }
 
 .img {
-  transform: var(--invert)
+  filter: var(--invert)
 }
 
 .lista ul {
