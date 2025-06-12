@@ -222,6 +222,7 @@ border-radius: 8px;
 }
 .como_funciona img {
   width: 130px;
+   filter: var(--invert)
 }
 
 .img {
