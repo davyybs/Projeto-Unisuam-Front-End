@@ -39,6 +39,7 @@
     --cor-caixa: #FFFFFF10;
     --cor-icon: invert() grayscale(1);
     --filtro-cadeado: invert(100%);
+    --invert: invert() grayscale(1);
 }
 
 body {
@@ -221,7 +222,7 @@ border-radius: 8px;
 }
 
 .img {
-  filter: grayscale(1) invert(1);
+  transform: var(--invert)
 }
 
 .lista ul {
