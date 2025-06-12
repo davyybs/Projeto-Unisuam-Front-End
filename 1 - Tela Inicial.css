@@ -265,6 +265,7 @@ footer {
     gap: 0;
     height: 230px;
     flex-wrap: wrap;
+    margin: auto;
   }
 
   .sloganTitle {
