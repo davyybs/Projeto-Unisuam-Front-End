@@ -2,15 +2,15 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=7">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="5 - 2FA.css">
+    
     <title>Core Connect</title>
 </head>
 <body>
     <header>
         <div class="logo" >
-        <a href="index.html"><img src="Imagens/logo1.png" width="200" alt=""></a>
+        <a href="1 - Tela Inicial.html"><img src="logo1.png" width="200" alt=""></a>
         </div>
 
         <div class="menu">
@@ -21,106 +21,119 @@
                 <a href="3 - Login.html"><li>Login</li></a>
             </ul>
             </nav>
-            <img src="Imagens/imagenoite.png" alt="">
-        </div>
-    </header>
-    
-    <div class="container">
-
-        <div class="titulo2">
-            <h1>2FA</h1>
-            <img class="cadeado" src="Imagens/cadeado.png" width="30" height="30" alt="">
-        </div>
-        
-        <div class="titulo">
-            <h3>Two-Factor Authentication </h3><br>
-        </div>
-        <div class="dois_fatores">
-            <h3>Autenticação de dois fatores</h3>
-        </div>
-        
-        <div>
-            O 2FA é um procedimento de segurança que garante que serão
-            necessários 2 fatores únicos para liberação de uma ação. O
-            primeiro fator é a senha que o usuário e o segundo pode ser autenticado via token, via detecção de impressão digital,
-            reconhecimento facial, código enviado via sms, entre outros.
-        </div>
-
-
-        <div class="p2FA" >
-            <ul>
-                O 2FA permite que você:
-                <li> Envie uma senha via SMS, voz ou e-mail para autenticação do usuário.</li>
-                <li> Adicione uma camada extra de segurança além da senha pessoal</li>
-                <li>Ofereça maior segurança para usuários.</li>
-            </ul>
-        <img src="Imagens/imagecomp.png" width="100" alt="">
-        </div>
-
-        <div class="titulo">
-            <h3>Fortaleça a estratégia de segurança de seu negócio.</h3> <br>
-            </div>
-                <p class="add">Adicionar um número de telefone de recuperação<br> 
-                a uma conta individual pode bloquear até:</p>
-            
-        
-        <div class="porc-area">
-            <p> <div class="porc">100% </div> dos bots automatizados,</p> <br>
-            <p> <div class="porc">99%</div> dos ataques de phishing em massa, e</p> <br>
-            <p> <div class="porc">66%</div> dos ataques direcionados. </p><br>
-        <p class="fonte"> *Fonte: Google Security Blog</p>
-        </div>
-        <div class="titulo">
-            <h3>Como Funciona?</h3>
-        </div>
-        <div class="como_funciona">
-        <div >
-            <img src="Imagens/laptop.png" width="200" >
-        <p> Usuário acessa seu site o aplicativo e digita a senha cadastrada para entrar em
-            seu perfil ou completar uma transação.</p>
-        </div>
-        <div >
-            <img src="Imagens/computer2.png" width="200" >
-            <p>O usuário insere o código no site ou aplicativo para concluir o processo de
-            verificação.</p>
-        </div>
-        <div >
-            <img src="Imagens/alerta1.png" width="200" >
-            <p>O usuário insere o código no site ou aplicativo para concluir o processo de
-            verificação.</p>
-        </div>
-        <div >
-            <img src="Imagens/chat_1sms.png" width="200" >
-        <p> A Telecall recebe a tentativa de login e solicita que o usuário insira seu número de 
-            telefone para autorizar o acesso.</p>
-        </div>
-        </div>
-        <div class=titulo>
-            <h3>Beneficios</h3>
-        </div>
-        <div class="lista">
-            <ul>
-                <li>Ofereça segurança aprimorada para seus clientes.</li>
-                <li>
-                    API simples e de rápida implementação.
-                </li>
-                <li>
-                    Envio de OTP por meio de vários canais, incluindo SMS, voz ou e-mail.
-                </li>
-                <li>
-                    Flexibilidade de canais garante que o usuário conseguirá completar a tarefa desejada
-                    mesmo quando tiver problema com um deles. Exemplo: Enviar OTP por SMS, em caso de
-                    falha, enviar OTP por chamada de voz, em caso de outra falha, enviar por e-mail.
-                </li>
-                <li>
-                    Reduza casos de fraude e invasões e evite o acesso a dados por invasores.
-                </li>
-                <li>
-                    Plataforma intuitiva que permite visualizar relatórios de uso por dia, mês ou ano e 
-                    pesquisar usando diversos critérios de filtro.
-                </li>
-            </ul>
-        </div>
+    <div class="aumentarfonte">
+       <button onclick="toggleControles()"><img src="aumentarfonte.png" alt=""></button>
+      <div id="mnr-fonte" class="mnr" style="display: none;">
+       <button onclick="alterarFonte(2)">+</button>
+       <button onclick="alterarFonte(-2)">-</button>
+       <button onclick="resetarFonte()">Resetar</button>
+      </div>
     </div>
-    <footer>© 2025 CoreConnect. All rights reserved.</footer>
+            <img  src="imagenoite.png" id="darkmode" class="dark" alt="">
+        </div>
+        </div>
+      </header>
+
+    
+<div class="container">
+
+    <div class="titulo2">
+        <h1>2FA</h1>
+        <img class="cadeado" src="cadeado.png" width="30" height="30" alt="">
+    </div>
+    
+    <div class="titulo">
+        <h3>Two-Factor Authentication </h3><br>
+    </div>
+    <div class="dois_fatores">
+        <h3>Autenticação de dois fatores</h3>
+    </div>
+    
+    <div>
+        O 2FA é um procedimento de segurança que garante que serão
+        necessários 2 fatores únicos para liberação de uma ação. O
+        primeiro fator é a senha que o usuário e o segundo pode ser autenticado via token, via detecção de impressão digital,
+        reconhecimento facial, código enviado via sms, entre outros.
+    </div>
+
+
+    <div class="p2FA" >
+        <ul>
+            O 2FA permite que você:
+            <li> Envie uma senha via SMS, voz ou e-mail para autenticação do usuário.</li>
+            <li> Adicione uma camada extra de segurança além da senha pessoal</li>
+            <li>Ofereça maior segurança para usuários.</li>
+        </ul>
+    <img class="img" src="imagecomp-removebg-preview.png" width="100" alt="">
+    </div>
+
+    <div class="titulo">
+        <h3>Fortaleça a estratégia de segurança de seu negócio.</h3> <br>
+        </div>
+            <p class="add">Adicionar um número de telefone de recuperação<br> 
+             a uma conta individual pode bloquear até:</p>
+        
+    
+    <div class="porc-area">
+        <p> <div class="porc">100% </div> dos bots automatizados,</p> <br>
+        <p> <div class="porc">99%</div> dos ataques de phishing em massa, e</p> <br>
+        <p> <div class="porc">66%</div> dos ataques direcionados. </p><br>
+       <p class="fonte"> *Fonte: Google Security Blog</p>
+    </div>
+    <div class="titulo">
+        <h3>Como Funciona?</h3>
+    </div>
+    <div class="como_funciona">
+    <div >
+        <img src="laptop.png" width="200" >
+       <p> Usuário acessa seu site o aplicativo e digita a senha cadastrada para entrar em
+        seu perfil ou completar uma transação.</p>
+    </div>
+    <div >
+        <img src="computer2.png" width="200" >
+        <p>O usuário insere o código no site ou aplicativo para concluir o processo de
+        verificação.</p>
+    </div>
+    <div >
+        <img src="alerta1.png" width="200" >
+        <p>O usuário insere o código no site ou aplicativo para concluir o processo de
+        verificação.</p>
+    </div>
+    <div >
+        <img src="chat_1sms.png" width="200" >
+       <p> A Telecall recebe a tentativa de login e solicita que o usuário insira seu número de 
+        telefone para autorizar o acesso.</p>
+    </div>
+    </div>
+    <div class=titulo>
+        <h3>Beneficios</h3>
+    </div>
+    <div class="lista">
+        <ul>
+            <li>Ofereça segurança aprimorada para seus clientes.</li>
+            <li>
+                API simples e de rápida implementação.
+            </li>
+            <li>
+                 Envio de OTP por meio de vários canais, incluindo SMS, voz ou e-mail.
+            </li>
+            <li>
+                 Flexibilidade de canais garante que o usuário conseguirá completar a tarefa desejada
+                mesmo quando tiver problema com um deles. Exemplo: Enviar OTP por SMS, em caso de
+                falha, enviar OTP por chamada de voz, em caso de outra falha, enviar por e-mail.
+            </li>
+            <li>
+                Reduza casos de fraude e invasões e evite o acesso a dados por invasores.
+            </li>
+            <li>
+                Plataforma intuitiva que permite visualizar relatórios de uso por dia, mês ou ano e 
+                pesquisar usando diversos critérios de filtro.
+            </li>
+        </ul>
+    </div>
+
+    
+</div>
+<footer>© 2025 CoreConnect. All rights reserved.</footer>
+<script src="2FA.js"></script>
 </body>
