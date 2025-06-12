@@ -239,7 +239,7 @@ footer {
   color: var(--cor-footer);
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 530px) {
   /* Header */
 
   header {
