@@ -83,6 +83,41 @@ header {
   text-decoration: underline;
 }
 
+.aumentarfonte {
+  position: relative; 
+}
+
+.aumentarfonte  button {
+  border: none;
+  background-color:var(--cor-principal);
+  cursor: pointer;
+}
+
+.search-nav {
+    width: 30px;
+}
+    
+.mnr {
+  position: absolute;     /* posiciona relativamente ao botão */
+  top: 100%;              /* faz o menu aparecer logo abaixo do botão */
+  background: #f1f1f1;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.mnr button {
+  display: block;
+  width: 100%;
+  margin-bottom: 6px;
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--cor-principal);
+  color: white;
+  cursor: pointer;
+}
+
 .nightMode {
   box-sizing: content-box;
   width: 30px;
