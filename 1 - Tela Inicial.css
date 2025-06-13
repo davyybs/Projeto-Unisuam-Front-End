@@ -302,6 +302,8 @@ footer {
     display: none;
   }
 
+  /* Menu Mobile */
+
   .btn-abrir-menu {
     display: block; /* <-- ADICIONE ISSO */
   }
