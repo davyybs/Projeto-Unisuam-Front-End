@@ -15,7 +15,7 @@
         </a>
       </div>
       <div class="navHeader">
-        <nav>
+        <nav class="nav-main">
           <ul>
             <a href="4 - Sobre Nós.html"><li class="liHeader">Sobre Nós</li></a>
             <a href="2 - Cadastro.html"
@@ -24,9 +24,41 @@
             <a href="3 - Login.html"><li class="liHeader">Login</li></a>
           </ul>
         </nav>
+        <div class="aumentarfonte">
+          <button onclick="toggleControles()">
+            <img src="Imagens/search-nav.png" alt="" class="search-nav" />
+          </button>
+          <div id="mnr-fonte" class="mnr" style="display: none">
+            <button onclick="alterarFonte(2)">+</button>
+            <button onclick="alterarFonte(-2)">-</button>
+            <button onclick="resetarFonte()">Resetar</button>
+          </div>
+        </div>
         <button id="darkmode">
           <img src="Imagens/imagenoite.png" class="nightMode" />
         </button>
+        <div class="btn-abrir-menu" id="btn-menu">
+          <img
+            src="Imagens/menu_256dp_FFFFFF_FILL0_wght300_GRAD0_opsz48.png"
+            alt=""
+          />
+        </div>
+        <div class="menu-mobile" id="menu-mobile">
+          <div class="fechar" id="fechar">
+            <img
+              src="Imagens/close_256dp_FFFFFF_FILL0_wght300_GRAD0_opsz48.png"
+              alt=""
+            />
+          </div>
+          <nav>
+            <ul>
+              <a href="2 - Cadastro.html"><li>Cadastre-se</li></a>
+              <a href="4 - Sobre Nós.html"><li>Sobre Nós</li></a>
+              <a href="3 - Login.html"><li>Login</li></a>
+            </ul>
+          </nav>
+        </div>
+        <div class="overlay-menu"></div>
       </div>
     </header>
     <div class="slogan">
@@ -105,7 +137,9 @@
             class="techImg"
             id="smsImg"
         /></a>
-        <a href="9 - SMS Programável.html"><h3 class="sms">SMS Programável</h3></a>
+        <a href="9 - SMS Programável.html"
+          ><h3 class="sms">SMS Programável</h3></a
+        >
         <span
           >Com essa ferramenta você envia mensagens de SMS comas informações que
           o seu cliente precisa e com asegurança, a velocidade e a
@@ -115,6 +149,7 @@
     </div>
     <footer>© 2025 CoreConnect. All rights reserved.</footer>
     <script src="js/darkmode.js"></script>
-    <script src="2FA.js"></script>
+    <script src="js/font.js"></script>
+    <script src="js/menu_mobile.js" defer></script>
   </body>
 </html>

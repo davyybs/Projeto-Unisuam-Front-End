@@ -21,6 +21,16 @@
                     <a href="3 - Login.html"><li class="liHeader">Login</li></a>
                 </ul>
             </nav>
+            <div class="aumentarfonte">
+          <button onclick="toggleControles()">
+            <img src="Imagens/search-nav.png" alt="" class="search-nav">
+          </button>
+          <div id="mnr-fonte" class="mnr" style="display: none">
+            <button onclick="alterarFonte(2)">+</button>
+            <button onclick="alterarFonte(-2)">-</button>
+            <button onclick="resetarFonte()">Resetar</button>
+          </div>
+        </div>
             <img src="Imagens/imagenoite.png" alt="" class="nightMode">
         </div>
     </header>
@@ -51,14 +61,14 @@
         </div>
         <div>
             <h2>O que nos Diferencia:</h2>
-                <p>
-                    <ul>
-                        <li>total em comunicação em tempo real;</li>
-                        <li>Integrações inteligentes com plataformas como Google Verified Calls;</li>
-                        <li>Suporte técnico humanizado e ágil;</li>
-                        <li>Interface intuitiva e robusta para desenvolvedores e gestores.</li>
-                    </ul>
-                </p>
+                    <p>
+                        <ul>
+                            <li>total em comunicação em tempo real;</li>
+                            <li>Integrações inteligentes com plataformas como Google Verified Calls;</li>
+                            <li>Suporte técnico humanizado e ágil;</li>
+                            <li>Interface intuitiva e robusta para desenvolvedores e gestores.</li>
+                        </ul>
+                    </p>
         </div>
         <div>
             <h2>Missão:</h2>
@@ -100,5 +110,6 @@
         </div>
     </div>
     <footer>© 2025 CoreConnect. All rights reserved.</footer>
+    <script src="js/font.js"></script>
 </body>
 </html>

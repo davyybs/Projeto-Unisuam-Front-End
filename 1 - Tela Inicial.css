@@ -17,6 +17,7 @@
   --cor-caixa: #ffffff;
   --cor-texto-caixa: #4f585d;
   --cor-footer: #90a4ae;
+  --cor-overlay: #000000a7;
   --fonte-principal: "Poppins", sans-serif;
 }
 
@@ -30,10 +31,12 @@
   --cor-texto-2: #ededed;
   --cor-texto-caixa: #bfbfc0;
   --cor-caixa: #ffffff10;
+  --cor-overlay: #0f172aa7;
   --cor-icon: invert() grayscale(1);
 }
 
-body {
+body,
+html {
   width: 100%;
   height: 100%;
   font-family: var(--fonte-principal);
@@ -44,6 +47,7 @@ body {
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: relative;
   width: 100%;
   height: 84px;
@@ -83,6 +87,41 @@ header {
   text-decoration: underline;
 }
 
+.aumentarfonte {
+  position: relative;
+}
+
+.aumentarfonte button {
+  border: none;
+  background-color: var(--cor-principal);
+  cursor: pointer;
+}
+
+.search-nav {
+  width: 25px;
+}
+
+.mnr {
+  position: absolute; /* posiciona relativamente ao botão */
+  top: 100%; /* faz o menu aparecer logo abaixo do botão */
+  background: #f1f1f1;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.mnr button {
+  display: block;
+  width: 100%;
+  margin-bottom: 6px;
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--cor-principal);
+  color: white;
+  cursor: pointer;
+}
+
 .nightMode {
   box-sizing: content-box;
   width: 30px;
@@ -94,6 +133,10 @@ header {
   background-color: #00000000;
   border-style: none;
   cursor: pointer;
+}
+
+.btn-abrir-menu, .menu-mobile, .overlay-menu {
+  display: none;
 }
 
 /* Slogan */
@@ -251,12 +294,87 @@ footer {
     width: 130px;
   }
 
-  nav {
+  .nav-main {
     display: none;
   }
 
-  .nightMode {
+  .aumentarfonte {
+    display: none;
+  }
+
+  .btn-abrir-menu {
+    display: block; /* <-- ADICIONE ISSO */
+  }
+
+  .btn-abrir-menu img {
+    width: 30px;
+    cursor: pointer;
+  }
+
+  .menu-mobile {
+    display: block;
+    height: 100vh;
+    width: 0%;
+    position: fixed;
+    background-color: var(--cor-principal);
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    overflow: hidden;
+    transition: 0.3s;
+  }
+
+  .menu-mobile.abrir-menu {
+    width: 70%;
+  }
+
+  .menu-mobile.abrir-menu ~ .overlay-menu {
+    display: block;
+  }
+
+  .menu-mobile .fechar {
+    padding: 20px 4%;
+    position: fixed;
+    cursor: pointer;
+  }
+
+  .menu-mobile .fechar img {
+    opacity: var(--opacidade);
     width: 25px;
+  }
+
+  .menu-mobile nav {
+    padding: 60px 0px;
+  }
+
+  .menu-mobile nav ul {
+    text-align: right;
+  }
+
+  .menu-mobile nav ul a {
+    display: block;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    list-style: none;
+    text-decoration: none;
+  }
+
+  .menu-mobile nav ul a:hover {
+    background-color: var(--cor-secundária);
+    color: var(--cor-texto-2);
+  }
+
+  .overlay-menu {
+    background-color: var(--cor-overlay);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
   }
 
   /* Slogan */

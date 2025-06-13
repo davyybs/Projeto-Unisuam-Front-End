@@ -1,52 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=7">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="2 - Login e Cadastro.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="2 - Login e Cadastro.css" />
     <title>Core Connect</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <a href="index.html"><img src="Imagens/logo1.png" class="logo" alt=""></a>
-        <button id="darkmode"><img src="Imagens/imagenoite.png" class="nightMode"></button>
+      <a href="index.html"
+        ><img src="Imagens/logo1.png" class="logo" alt=""
+      /></a>
+      <div class="aumentarfonte">
+        <button onclick="toggleControles()">
+          <img src="Imagens/search-nav.png" alt="" class="search-nav" />
+        </button>
+        <div id="mnr-fonte" class="mnr" style="display: none">
+          <button onclick="alterarFonte(2)">+</button>
+          <button onclick="alterarFonte(-2)">-</button>
+          <button onclick="resetarFonte()">Resetar</button>
+        </div>
+      </div>
+      <button id="darkmode">
+        <img src="Imagens/imagenoite.png" class="nightMode" />
+      </button>
     </header>
     <main>
-        <div class="container">
-            <div class="title">
-                <h1>Cadastre-se</h1>
-            </div>
-            <form action="">
-                    <div class="cad">
-                        <input type="text" placeholder="Nome Completo" class="cadBox">
-                        <input type="text" placeholder="Nome Materno" class="cadBox">
-                        <label>
-                            <input type="date" class="cadBox date">
-                        </label>
-                        <select  class="cadBox">
-                            <option value="" hidden>Sexo</option>
-                            <option value="1">Masculino</option>
-                            <option value="2">Feminino</option>
-                            <option value="3">Prefiro não Informar</option>
-                        </select>
-                        <input type="text" placeholder="CPF" class="cadBox">
-                        <input type="text" placeholder="Telefone Celular" class="cadBox">
-                        <input type="text" placeholder="Email" class="cadBox">
-                        <input type="text" placeholder="Telefone Fixo" class="cadBox">
-                        <input type="password" placeholder="Senha" class="cadBox">
-                        <input type="password" placeholder="Confirmar Senha" class="cadBox">
-                    </div>
-            </form>
-                <div class="submit">
-                    <input type="submit" value="Enviar" class="submitBoxCad">
-                </div>
-                <div class="cadastro">
-                    Já Possui uma Conta?
-                    <a href="3 - Login.html" class="cadastre-se">Faça Login</a>
-                </div>
+      <div class="container">
+        <div class="title">
+          <h1>Cadastre-se</h1>
         </div>
+        <form action="">
+          <div class="cad">
+            <input type="text" placeholder="Nome Completo" class="cadBox" />
+            <input type="text" placeholder="Nome Materno" class="cadBox" />
+            <label>
+              <input type="date" class="cadBox date" />
+            </label>
+            <select class="cadBox">
+              <option value="" hidden>Sexo</option>
+              <option value="1">Masculino</option>
+              <option value="2">Feminino</option>
+              <option value="3">Prefiro não Informar</option>
+            </select>
+            <input type="text" placeholder="CPF" class="cadBox" />
+            <input type="text" placeholder="Telefone Celular" class="cadBox" />
+            <input type="text" placeholder="Email" class="cadBox" />
+            <input type="text" placeholder="Telefone Fixo" class="cadBox" />
+            <input type="password" placeholder="Senha" class="cadBox" />
+            <input
+              type="password"
+              placeholder="Confirmar Senha"
+              class="cadBox"
+            />
+          </div>
+        </form>
+        <div class="submit">
+          <input type="submit" value="Enviar" class="submitBoxCad" />
+        </div>
+        <div class="cadastro">
+          Já Possui uma Conta?
+          <a href="3 - Login.html" class="cadastre-se">Faça Login</a>
+        </div>
+      </div>
     </main>
     <script src="js/darkmode.js"></script>
-</body>
+    <script src="js/font.js"></script>
+  </body>
 </html>
