@@ -67,6 +67,11 @@ header {
   align-items: flex-start;
 }
 
+.buttons {
+  display: inline-flex;
+  align-items: center;
+}
+
 .logo {
   top: 0;
   left: 0;
@@ -81,12 +86,12 @@ header {
 
 .aumentarfonte button {
   border: none;
-  background-color: var(--cor-principal);
+  background-color: #00000000;
   cursor: pointer;
 }
 
 .search-nav {
-  width: 25px;
+  width: 27px;
 }
 
 .mnr {
@@ -331,4 +336,145 @@ select {
   background-color: var(--cor-principal);
   transition: background-color 0.3s;
   cursor: pointer;
+}
+
+@media screen and (max-width: 992px) {
+  /* Header */
+
+  header {
+    height: 100px;
+  }
+
+  main {
+    padding-top: 30px;
+  }
+
+  .logo {
+    width: 130px;
+  }
+
+  .search-nav {
+    width: 20px;
+  }
+
+  .nightMode {
+    width: 25px;
+  }
+
+  /* Login and Cad Box */
+
+  .container {
+    width: 335px;
+    height: 430px;
+    border-radius: 35px;
+  }
+
+  h1 {
+    font-size: 1.6em;
+  }
+
+  h2 {
+    font-size: 0.9em;
+  }
+
+  .login {
+    gap: 10px;
+  }
+
+  .loginBox {
+    width: 280px;
+    height: 50px;
+    padding-left: 40px;
+    font-size: 0.8em;
+  }
+
+  .email {
+    background: var(--cor-login) url("Imagens/imageinicio1.png") no-repeat
+      center center / 16.03px 16.03px;
+    background-position: left 12.02px top 16px;
+  }
+
+  .password {
+    background: var(--cor-login) url("Imagens/imageinicio2.png") no-repeat
+      center center / 16.03px 16.03px;
+    background-position: left 12.02px top 16px;
+  }
+
+  .checkbox-wrapper {
+    width: 145px;
+    padding: 15px 0px 15px 30px;
+    font-size: 0.75em;
+  }
+
+  .submitBox {
+    width: 280px;
+    height: 53px;
+    font-size: 1.2em;
+  }
+
+  .cadastro {
+    padding: 15px;
+    gap: 50px;
+    font-size: 0.6em;
+  }
+  /* Cadastro */
+
+  .cad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .cadBox {
+    width: 188.375px;
+    height: 28px;
+    border-style: none;
+    border-radius: 10px;
+    padding-left: 10px;
+    background-color: var(--cor-login);
+  }
+
+  .cadBox::placeholder {
+    color: var(--cor-placeholder);
+  }
+
+  .termos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 20px 80px;
+    font-size: 9px;
+    color: #a1a1a1;
+  }
+
+  select {
+    color: var(--cor-placeholder);
+  }
+
+  .date {
+    padding-right: 10px;
+    color: var(--cor-placeholder);
+  }
+
+  .submitBoxCad {
+    border-style: none;
+    border-radius: 20px;
+    width: 376.75px;
+    height: 56.11px;
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: var(--cor-submit);
+    color: var(--texto-submit);
+  }
+
+  .submitBoxCad:hover {
+    background-color: var(--cor-principal);
+    transition: background-color 0.3s;
+    cursor: pointer;
+  }
 }
