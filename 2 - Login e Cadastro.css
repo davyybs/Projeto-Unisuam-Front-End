@@ -95,8 +95,8 @@ header {
 }
 
 .mnr {
-  position: absolute; /* posiciona relativamente ao botão */
-  top: 100%; /* faz o menu aparecer logo abaixo do botão */
+  position: absolute;
+  top: 100%;
   background: #f1f1f1;
   padding: 10px;
   border-radius: 8px;
@@ -142,7 +142,25 @@ main {
   box-shadow: 0px 4px 50px var(--sombra);
 }
 
+.containerCad {
+  background-color: var(--cor-caixa);
+  border-radius: 40.08px;
+  width: 505px;
+  height: 520px;
+  box-shadow: 0px 4px 50px var(--sombra);
+}
+
 .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 48.1px 0px 32.06px 0px;
+  gap: 10px;
+  color: var(--cor-texto-1);
+}
+
+.titleCad {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -179,14 +197,14 @@ h2 {
 }
 
 .email {
-  background: var(--cor-login) url("imageinicio1.png") no-repeat center center /
-    16.03px 16.03px;
+  background: var(--cor-login) url("Imagens/imageinicio1.png") no-repeat center
+    center / 16.03px 16.03px;
   background-position: left 12.02px top 20.04px;
 }
 
 .password {
-  background: var(--cor-login) url("imageinicio2.png") no-repeat center center /
-    16.03px 16.03px;
+  background: var(--cor-login) url("Imagens/imageinicio2.png") no-repeat center
+    center / 16.03px 16.03px;
   background-position: left 12.02px top 20.04px;
 }
 
@@ -300,17 +318,6 @@ label {
   color: var(--cor-placeholder);
 }
 
-.termos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  text-align: center;
-  padding: 20px 80px;
-  font-size: 9px;
-  color: #a1a1a1;
-}
-
 select {
   color: var(--cor-placeholder);
 }
@@ -361,7 +368,7 @@ select {
     width: 25px;
   }
 
-  /* Login and Cad Box */
+  /* Login Box */
 
   .container {
     width: 335px;
@@ -417,42 +424,25 @@ select {
     gap: 50px;
     font-size: 0.6em;
   }
+
   /* Cadastro */
 
-  .cad {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
+  .containerCad {
+    width: 340px;
+    height: 450px;
+    border-radius: 35px;
+  }
+
+  .titleCad {
+    padding: 30px 0px;
   }
 
   .cadBox {
-    width: 188.375px;
+    width: 130px;
     height: 28px;
     border-style: none;
     border-radius: 10px;
-    padding-left: 10px;
-    background-color: var(--cor-login);
-  }
-
-  .cadBox::placeholder {
-    color: var(--cor-placeholder);
-  }
-
-  .termos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    text-align: center;
-    padding: 20px 80px;
-    font-size: 9px;
-    color: #a1a1a1;
-  }
-
-  select {
-    color: var(--cor-placeholder);
+    font-size: 0.8em;
   }
 
   .date {
@@ -461,20 +451,9 @@ select {
   }
 
   .submitBoxCad {
-    border-style: none;
-    border-radius: 20px;
-    width: 376.75px;
-    height: 56.11px;
-    margin-top: 30px;
-    font-size: 20px;
-    font-weight: 600;
-    background-color: var(--cor-submit);
-    color: var(--texto-submit);
-  }
-
-  .submitBoxCad:hover {
-    background-color: var(--cor-principal);
-    transition: background-color 0.3s;
-    cursor: pointer;
+    width: 280px;
+    height: 53px;
+    margin-top: 20px;
+    font-size: 1.2em;
   }
 }
