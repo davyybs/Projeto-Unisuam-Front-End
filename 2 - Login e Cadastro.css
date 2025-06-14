@@ -17,6 +17,7 @@
   --opacidade: 1;
   --cor-login: #e6e6e6;
   --cor-placeholder: #8c8c8c;
+  --cor-input: #000000;
   --cor-checkbox: #575757;
   --cor-checkbox: #575757;
   --checkbox-hover: #868686;
@@ -38,6 +39,7 @@
   --opacidade: 0.8;
   --cor-login: #d0d2d850;
   --cor-placeholder: #d0d2d8;
+  --cor-input: #ededed;
   --cor-checkbox: #dcdcdc;
   --checkbox-hover: #d0d2d890;
   --checkbox-checked: #4caf50;
@@ -194,6 +196,10 @@ h2 {
   height: 56.11px;
   padding-left: 40.08px;
   font-size: 14px;
+}
+
+input {
+  color: var(--cor-input);
 }
 
 .email {
@@ -448,6 +454,10 @@ select {
   .date {
     padding-right: 10px;
     color: var(--cor-placeholder);
+  }
+
+  .cadBox.hasValue {
+    color: #000000;
   }
 
   .submitBoxCad {

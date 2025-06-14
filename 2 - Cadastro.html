@@ -39,10 +39,16 @@
             <input type="text" placeholder="Nome Completo" class="cadBox" />
             <input type="text" placeholder="Nome Materno" class="cadBox" />
             <label>
-              <input type="date" class="cadBox date" />
+              <input
+                type="text"
+                placeholder="Data de Nascimento"
+                class="cadBox"
+                oninput="formatarData(this)"
+                maxlength="10"
+              />
             </label>
-            <select class="cadBox">
-              <option value="" hidden>Sexo</option>
+            <select class="cadBox" required>
+              <option value="" disabled selected hidden>Sexo</option>
               <option value="1">Masculino</option>
               <option value="2">Feminino</option>
               <option value="3">Prefiro não Informar</option>
@@ -70,5 +76,6 @@
     </main>
     <script src="js/darkmode.js"></script>
     <script src="js/font.js"></script>
+    <script src="js/cadastro.js"></script>
   </body>
 </html>
