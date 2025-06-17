@@ -39,7 +39,7 @@
   --opacidade: 0.8;
   --cor-login: #d0d2d850;
   --cor-placeholder: #d0d2d8;
-  --cor-input: #ededed;
+  --cor-input: #ffffff;
   --cor-checkbox: #dcdcdc;
   --checkbox-hover: #d0d2d890;
   --checkbox-checked: #4caf50;
@@ -52,6 +52,10 @@
 }
 
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   font-family: var(--fonte-principal);
   width: 100vw;
   height: 100vh;
@@ -67,6 +71,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
 }
 
 .buttons {
@@ -97,8 +105,10 @@ header {
 }
 
 .mnr {
+  display: none;
   position: absolute;
   top: 100%;
+  left: -32px;
   background: #f1f1f1;
   padding: 10px;
   border-radius: 8px;
@@ -351,7 +361,7 @@ select {
   cursor: pointer;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 767px) {
   /* Header */
 
   header {

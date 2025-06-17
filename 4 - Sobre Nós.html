@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=7">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="Imagens/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="4 - Sobre Nós.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="Imagens/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="4 - Sobre Nós.css" />
     <title>Core Connect</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="logo">
-            <a href="index.html">
-                <img src="Imagens/logo1.png" alt="" class="logoImage">
-            </a>
-        </div>
-        <div class="navHeader">
-            <nav>
-                <ul>
-                    <a href="2 - Cadastro.html"><li class="liHeader">Cadastre-se</li></a>
-                    <a href="3 - Login.html"><li class="liHeader">Login</li></a>
-                </ul>
-            </nav>
-            <div class="aumentarfonte">
+      <div class="logo">
+        <a href="index.html">
+          <img src="Imagens/logo1.png" alt="" class="logoImage" />
+        </a>
+      </div>
+      <div class="navHeader">
+        <nav class="nav-main">
+          <ul>
+            <a href="2 - Cadastro.html"
+              ><li class="liHeader">Cadastre-se</li></a
+            >
+            <a href="3 - Login.html"><li class="liHeader">Login</li></a>
+          </ul>
+        </nav>
+        <div class="aumentarfonte">
           <button onclick="toggleControles()">
-            <img src="Imagens/search-nav.png" alt="" class="search-nav">
+            <img src="Imagens/search-nav.png" alt="" class="search-nav" />
           </button>
           <div id="mnr-fonte" class="mnr" style="display: none">
             <button onclick="alterarFonte(2)">+</button>
@@ -32,85 +34,140 @@
             <button onclick="resetarFonte()">Resetar</button>
           </div>
         </div>
-            <img src="Imagens/imagenoite.png" alt="" class="nightMode">
+        <button id="darkmode">
+          <img src="Imagens/imagenoite.png" class="nightMode" />
+        </button>
+        <div class="btn-abrir-menu" id="btn-menu">
+          <img
+            src="Imagens/menu_256dp_FFFFFF_FILL0_wght300_GRAD0_opsz48.png"
+            alt=""
+          />
         </div>
+        <div class="menu-mobile" id="menu-mobile">
+          <div class="fechar" id="fechar">
+            <img
+              src="Imagens/close_256dp_FFFFFF_FILL0_wght300_GRAD0_opsz48.png"
+              alt=""
+            />
+          </div>
+          <nav>
+            <ul>
+              <a href="2 - Cadastro.html"><li>Cadastre-se</li></a>
+              <a href="3 - Login.html"><li>Login</li></a>
+            </ul>
+          </nav>
+        </div>
+        <div class="overlay-menu"></div>
+      </div>
     </header>
     <div class="slogan">
-        <div>
-            <img src="Imagens/logo1.png" alt="" class="logoSlogan">
-        </div>
-        <div>
-            <!-- <img src="barra1.png" alt="" class="sloganBar1"> -->
-            <h1 class="sloganPhrase">Onde a tecnologia encontra a confiança</h1>
-            <!-- <img src="barra2.png" alt="" class="sloganBar2"> -->
-        </div>
+      <div>
+        <img src="Imagens/logo1.png" alt="" class="logoSlogan" />
+      </div>
+      <div>
+        <!-- <img src="barra1.png" alt="" class="sloganBar1"> -->
+        <h1 class="sloganPhrase">Onde a tecnologia encontra a confiança</h1>
+        <!-- <img src="barra2.png" alt="" class="sloganBar2"> -->
+      </div>
     </div>
     <div class="text">
-        <div class="textGap">
-            <div class="textLine">
-                <img src="Imagens/linha_reta_arredondada.png" alt="" class="line1">
-                <h1 class="textTitle">Sobre Nós</h1>
-                <img src="Imagens/linha_reta_arredondada_1070x10.png" alt="" class="line2">
-            </div>
-            <p>
-            Na CoreConnect, somos movidos por uma missão clara: simplificar e fortalecer a comunicação empresarial por meio da tecnologia CPaaS (Communications Platform as a Service). Unimos inovação, confiabilidade e usabilidade para conectar empresas aos seus clientes com mais eficiência e transparência.
-
-            Fundada com foco em soluções na nuvem, a CoreConnect oferece recursos como envio de menshagens, chamadas verificadas, autenticação e integração omnichannel de forma rápida, escalável e segura.
-
-            Nossa equipe é formada por especialistas em tecnologia, telecomunicações e design de experiência — todos comprometidos em entregar valor real e contínuo aos nossos parceiros.
-            </p>
-        </div>
+      <div>
+          <div class="linha-com-titulo">
+            <div class="linha"></div>
+            <h2 class="textTitle">Sobre Nós</h2>
+            <div class="linha"></div>
+          </div>
+      </div>
+      <div class="textPadding">
+        <ul>
+          <li class="listStyle">
+            Na CoreConnect, somos movidos por uma missão clara: simplificar e
+            fortalecer a comunicação empresarial por meio da tecnologia CPaaS
+            (Communications Platform as a Service). Unimos inovação,
+            confiabilidade e usabilidade para conectar empresas aos seus
+            clientes com mais eficiência e transparência.
+          </li>
+          <li class="listStyle">
+            Fundada com foco em soluções na nuvem, a CoreConnect oferece
+            recursos como envio de menshagens, chamadas verificadas,
+            autenticação e integração omnichannel de forma rápida, escalável e
+            segura.
+          </li>
+          <li class="listStyle">
+            Nossa equipe é formada por especialistas em tecnologia,
+            telecomunicações e design de experiência — todos comprometidos em
+            entregar valor real e contínuo aos nossos parceiros.
+          </li>
+        </ul>
+      </div>
+      <div class="textPadding">
+        <h2>O que nos Diferencia:</h2>
+        <ul>
+          <li>total em comunicação em tempo real;</li>
+          <li>
+            Integrações inteligentes com plataformas como Google Verified Calls;
+          </li>
+          <li>Suporte técnico humanizado e ágil;</li>
+          <li>
+            Interface intuitiva e robusta para desenvolvedores e gestores.
+          </li>
+        </ul>
+      </div>
+      <div class="textPadding">
+        <h2>Missão:</h2>
+        <p>
+          Transformar a forma como empresas se comunicam, tornando interações
+          mais humanas, seguras e eficientes através da tecnologia em nuvem.
+        </p>
+      </div>
+      <div class="textPadding">
+        <h2>Visão:</h2>
+        <p>
+          Ser referência em soluções CPaaS na América Latina, impulsionando
+          conexões entre marcas e pessoas.
+        </p>
+      </div>
+      <div class="textPadding">
+        <h2>Valores:</h2>
+        <ul>
+          <li>Inovação Contínua</li>
+          <li>Transparênçia</li>
+          <li>confiabilidade</li>
+          <li>Foco no cliente</li>
+          <li>Colaboração</li>
+        </ul>
+      </div>
         <div>
-            <h2>O que nos Diferencia:</h2>
-                    <p>
-                        <ul>
-                            <li>total em comunicação em tempo real;</li>
-                            <li>Integrações inteligentes com plataformas como Google Verified Calls;</li>
-                            <li>Suporte técnico humanizado e ágil;</li>
-                            <li>Interface intuitiva e robusta para desenvolvedores e gestores.</li>
-                        </ul>
-                    </p>
+           <div class="linha-com-titulo">
+            <div class="linha"></div>
+            <h2 class="textTitle">Nossa Linha do Tempo</h2>
+            <div class="linha"></div>
+          </div>
         </div>
-        <div>
-            <h2>Missão:</h2>
-            <p>
-                Transformar a forma como empresas se comunicam,
-                tornando interações mais humanas,
-                seguras e eficientes através da tecnologia em nuvem.
-            </p>
-        </div>
-        <div>
-            <h2>Visão:</h2>
-            Ser referência em soluções CPaaS na América Latina,
-            impulsionando conexões entre marcas e pessoas.
-        </div>
-        <div>
-            <h2>Valores:</h2>
-            <p>
-                <ul>
-                    <li>Inovação Contínua</li>
-                    <li>Transparênçia</li>
-                    <li>confiabilidade</li>
-                    <li>Foco no cliente</li>
-                    <li>Colaboração</li>
-                </ul>
-            </p>
-        </div>
-        <div>
-            <div class="textLine">
-                <img src="Imagens/linha_reta_arredondada.png" alt="" class="line1">
-                <h1 class="textTitle">Nossa Linha do Tempo</h1>
-                <img src="Imagens/linha_reta_arredondada_780x10.png" alt="" class="line2">
-            </div>
-            <p>
-                2022 — Fundação da CoreConnect com foco em soluções de comunicação digital.
-                2023 — Lançamento da plataforma CPaaS com suporte a múltiplos canais (voz, SMS, WhatsApp).
-                2024 — Parceria oficial com Google Verified Calls e crescimento acelerado.
-                2025 — Expansão nacional e início da atuação em mercados da América do Sul.
-            </p>
-        </div>
+        <div class="textPadding">
+        <ul>
+          <li class="listStyle">
+            2022 — Fundação da CoreConnect com foco em soluções de comunicação
+            digital.
+          </li>
+          <li class="listStyle">
+            2023 — Lançamento da plataforma CPaaS com suporte a múltiplos canais
+            (voz, SMS, WhatsApp).
+          </li>
+          <li class="listStyle">
+            2024 — Parceria oficial com Google Verified Calls e crescimento
+            acelerado.
+          </li>
+          <li class="listStyle">
+            2025 — Expansão nacional e início da atuação em mercados da América
+            do Sul.
+          </li>
+        </ul>
+      </div>
     </div>
     <footer>© 2025 CoreConnect. All rights reserved.</footer>
+    <script src="js/darkmode.js"></script>
     <script src="js/font.js"></script>
-</body>
+    <script src="js/menu_mobile.js"></script>
+  </body>
 </html>

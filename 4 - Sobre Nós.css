@@ -7,20 +7,53 @@
   font-family: "Poppins", sans-serif;
 }
 
-body {
-  width: 100%;
-  height: 100vh;
+:root {
+  --cor-principal: #1a237f;
+  --cor-secundária: #4fc3f7;
+  --cor-fundo: #fafafa;
+  --sombra: #00000025;
+  --opacidade: 1;
+  --cor-texto-1: #ffffff;
+  --cor-texto-2: #1a237f;
+  --cor-texto-3: #000000;
+  --cor-texto-caixa: #4f585d;
+  --cor-footer: #90a4ae;
+  --cor-overlay: #000000a7;
+  --fonte-principal: "Poppins", sans-serif;
 }
+
+.dark-mode {
+  --cor-principal: #0f172a;
+  --cor-secundária: #172554;
+  --cor-fundo: #1d3370;
+  --sombra: #00000050;
+  --opacidade: 0.8;
+  --cor-texto-1: #d0d2d8;
+  --cor-texto-2: #ffffff;
+  --cor-texto-3: #ededed;
+  --cor-overlay: #0f172aa7;
+  --cor-icon: invert() grayscale(1);
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  font-family: var(--fonte-principal);
+}
+
+/* Header */
 
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: relative;
   width: 100%;
   height: 84px;
   padding: 25px;
-  background-color: #1a237f;
-  box-shadow: 0px 4px 30px #00000025;
+  background-color: var(--cor-principal);
+  box-shadow: 0px 4px 30px var(--sombra);
 }
 
 .logo {
@@ -31,6 +64,7 @@ header {
 .logoImage {
   display: flex;
   width: 160px;
+  opacity: var(--opacidade);
 }
 
 .navHeader {
@@ -44,8 +78,8 @@ header {
   display: inline-flex;
   padding: 10px;
   list-style: none;
-  font-size: 1em;
-  color: #ffffff;
+  font-size: 0.75em;
+  color: var(--cor-texto-1);
   font-weight: bold;
 }
 
@@ -55,6 +89,7 @@ header {
 
 .aumentarfonte {
   position: relative;
+  margin-left: -20px;
 }
 
 .aumentarfonte button {
@@ -92,6 +127,19 @@ header {
   box-sizing: content-box;
   width: 30px;
   padding-right: 0px;
+  opacity: var(--opacidade);
+}
+
+#darkmode {
+  background-color: #00000000;
+  border-style: none;
+  cursor: pointer;
+}
+
+.btn-abrir-menu,
+.menu-mobile,
+.overlay-menu {
+  display: none;
 }
 
 .slogan {
@@ -102,8 +150,8 @@ header {
   padding: 40px;
   width: 100%;
   height: 380px;
-  background: linear-gradient(to bottom, #1a237f, #4fc3f7);
-  color: #ffffff;
+  background: linear-gradient(to bottom, var(--cor-principal), var(--cor-secundária));
+  color: var(--cor-texto-1);
 }
 
 .logoSlogan {
@@ -122,40 +170,57 @@ header {
   flex-direction: column;
   width: 100%;
   gap: 20px;
-  padding: 50px 250px;
-  background: linear-gradient(to bottom, #4fc3f7 0%, #f7f9fb 6%);
+  padding-bottom: 30px;
+  background: linear-gradient(to bottom, var(--cor-secundária) 0%, var(--cor-fundo) 6%);
+  color: var(--cor-texto-3);
 }
 
-.textLine {
-  display: inline-flex;
+.textPadding {
+  padding: 5px 250px;
+}
+
+.text p, ul{
+  font-size: 1.331em;
+  font-weight: 550;
+  padding: 0px 20px;
+}
+
+.listStyle {
+  list-style: none;
+  padding: 15px 0px;
+}
+
+.linha-com-titulo {
+  display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 20px; /* Espaço entre as linhas e o texto */
+  margin-bottom: 20px;
 }
 
-.line1 {
-  width: 215px;
-  height: 10px;
-  margin-left: -240px;
-}
-
-.line2 {
-  width: 1010px;
-  max-width: 100%;
-  margin-right: -240px;
+.linha {
+  flex: 1; /* Faz com que a linha ocupe o espaço disponível */
+  height: 8px;
+  background-color: var(--cor-principal); /* Azul escuro */
+  border-radius: 10px; /* Deixa a linha com pontas arredondadas */
+  margin: 0 15px;
 }
 
 .textTitle {
-  color: #1a237f;
+  white-space: nowrap;
+  color: var(--cor-texto-2);
   font-weight: bold;
   font-size: 2.8em;
   gap: 20px;
   padding: 10px 0px;
+  margin: 0;
 }
 
 h2 {
-  color: #1a237f;
+  color: var(--cor-texto-2);
   font-weight: bold;
   padding: 10px 0px;
+  font-size: 1.7em;
+  padding: 20px 0px;
 }
 
 footer {
@@ -164,6 +229,6 @@ footer {
   align-items: center;
   width: 100%;
   height: 50px;
-  background-color: #1a237f;
-  color: #90a4ae;
+  background-color: var(--cor-principal);
+  color: var(--cor-footer);
 }
