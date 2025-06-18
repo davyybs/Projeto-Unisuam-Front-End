@@ -453,7 +453,7 @@ footer {
   }
 }
 
-@media (min-width: 672px) and (max-width: 1100px) {
+@media (min-width: 672px) and (max-width: 1200px) {
   /* Slogan */
 
   .slogan {
