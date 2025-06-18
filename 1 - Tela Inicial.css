@@ -503,7 +503,7 @@ footer {
   /* Menu Mobile */
 
   .btn-abrir-menu {
-    display: block; /* <-- ADICIONE ISSO */
+    display: block;
   }
 
   .btn-abrir-menu img {
@@ -549,6 +549,7 @@ footer {
 
   .menu-mobile nav ul {
     text-align: right;
+    padding: 0;
   }
 
   .menu-mobile nav ul a {

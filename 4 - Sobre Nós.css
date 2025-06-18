@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +15,7 @@
   --cor-fundo: #fafafa;
   --sombra: #00000025;
   --opacidade: 1;
+  --cor-texto-titulo: #1a237f;
   --cor-texto-1: #ffffff;
   --cor-texto-2: #1a237f;
   --cor-texto-3: #000000;
@@ -28,8 +31,9 @@
   --cor-fundo: #1d3370;
   --sombra: #00000050;
   --opacidade: 0.8;
+  --cor-texto-titulo: #8ab7ff;
   --cor-texto-1: #d0d2d8;
-  --cor-texto-2: #ffffff;
+  --cor-texto-2: #aed3fd;
   --cor-texto-3: #ededed;
   --cor-overlay: #0f172aa7;
   --cor-icon: invert() grayscale(1);
@@ -142,6 +146,8 @@ header {
   display: none;
 }
 
+/* Slogan */
+
 .slogan {
   display: flex;
   justify-content: center;
@@ -150,12 +156,20 @@ header {
   padding: 40px;
   width: 100%;
   height: 380px;
-  background: linear-gradient(to bottom, var(--cor-principal), var(--cor-secundária));
+  background: linear-gradient(
+    to bottom,
+    var(--cor-principal),
+    var(--cor-secundária)
+  );
   color: var(--cor-texto-1);
 }
 
 .logoSlogan {
   width: 350px;
+}
+
+.logoSloganMobile {
+  display: none;
 }
 
 .sloganPhrase {
@@ -170,8 +184,12 @@ header {
   flex-direction: column;
   width: 100%;
   gap: 20px;
-  padding-bottom: 30px;
-  background: linear-gradient(to bottom, var(--cor-secundária) 0%, var(--cor-fundo) 6%);
+  padding: 30px 0px;
+  background: linear-gradient(
+    to bottom,
+    var(--cor-secundária) 0%,
+    var(--cor-fundo) 6%
+  );
   color: var(--cor-texto-3);
 }
 
@@ -179,7 +197,8 @@ header {
   padding: 5px 250px;
 }
 
-.text p, ul{
+.text p,
+ul {
   font-size: 1.331em;
   font-weight: 550;
   padding: 0px 20px;
@@ -207,7 +226,7 @@ header {
 
 .textTitle {
   white-space: nowrap;
-  color: var(--cor-texto-2);
+  color: var(--cor-texto-titulo);
   font-weight: bold;
   font-size: 2.8em;
   gap: 20px;
@@ -217,6 +236,7 @@ header {
 
 h2 {
   color: var(--cor-texto-2);
+  text-decoration: underline;
   font-weight: bold;
   padding: 10px 0px;
   font-size: 1.7em;
@@ -231,4 +251,200 @@ footer {
   height: 50px;
   background-color: var(--cor-principal);
   color: var(--cor-footer);
+}
+
+@media screen and (max-width: 576px) {
+  /* Header */
+
+  header {
+    padding: 15px;
+    height: 70px;
+  }
+
+  .logoImage {
+    width: 130px;
+  }
+
+  .nav-main {
+    display: none;
+  }
+
+  .aumentarfonte {
+    display: none;
+  }
+
+  /* Menu Mobile */
+
+  .btn-abrir-menu {
+    display: block;
+  }
+
+  .btn-abrir-menu img {
+    width: 30px;
+    cursor: pointer;
+  }
+
+  .menu-mobile {
+    display: block;
+    height: 100vh;
+    width: 0%;
+    position: fixed;
+    background-color: var(--cor-principal);
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    overflow: hidden;
+    transition: 0.3s;
+  }
+
+  .menu-mobile.abrir-menu {
+    width: 70%;
+  }
+
+  .menu-mobile.abrir-menu ~ .overlay-menu {
+    display: block;
+  }
+
+  .menu-mobile .fechar {
+    padding: 20px 4%;
+    position: fixed;
+    cursor: pointer;
+  }
+
+  .menu-mobile .fechar img {
+    opacity: var(--opacidade);
+    width: 25px;
+  }
+
+  .menu-mobile nav {
+    padding: 60px 0px;
+  }
+
+  .menu-mobile nav ul {
+    text-align: right;
+    padding: 0;
+  }
+
+  .menu-mobile nav ul a {
+    display: block;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    list-style: none;
+    text-decoration: none;
+  }
+
+  .menu-mobile nav ul a:hover {
+    background-color: var(--cor-secundária);
+    color: var(--cor-texto-2);
+  }
+
+  .overlay-menu {
+    background-color: var(--cor-overlay);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+  }
+
+  /* Slogan */
+
+  .slogan {
+    justify-content: space-around;
+    gap: 30px;
+    padding: 30px;
+    width: 100%;
+    height: 180px;
+  }
+
+  .logoSlogan {
+    display: none;
+  }
+
+  .logoSloganMobile {
+    display: flex;
+    width: 60px;
+    opacity: var(--opacidade);
+  }
+
+  .sloganPhrase {
+    padding: 10px;
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+    font-size: 1.15em;
+    text-align: right;
+    width: 100%;
+  }
+
+  /* Texto */
+
+  .text {
+    width: 100%;
+    gap: 20px;
+    padding: 20px 0px;
+    background: linear-gradient(
+      to bottom,
+      var(--cor-secundária) 0%,
+      var(--cor-fundo) 2.5%
+    );
+  }
+
+  .textPadding {
+    padding: 5px 10px;
+  }
+
+  .text p,
+  ul {
+    font-size: 1.1em;
+    font-weight: 530;
+    padding: 0px 20px;
+  }
+
+  .listStyle {
+    list-style: none;
+    padding: 15px 0px;
+  }
+
+  .linha-com-titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+  }
+
+  .linha {
+    flex: 1;
+    min-width: 30px; /* mínimo visível */
+    height: 6px;
+    background-color: var(--cor-texto-titulo);
+    border-radius: 10px;
+  }
+
+  .textTitle {
+    white-space: normal;
+    word-break: break-word;
+    max-width: 100%;
+    font-size: 2em;
+    text-align: center;
+    padding: 0 0px;
+  }
+
+  h2 {
+    color: var(--cor-texto-2);
+    font-weight: bold;
+    padding: 10px 0px;
+    font-size: 1.5em;
+    padding: 20px 10px;
+  }
+
+  /* Footer */
+
+  footer {
+    height: 30px;
+    font-size: 0.75em;
+  }
 }
