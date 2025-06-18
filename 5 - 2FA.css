@@ -112,8 +112,9 @@ header {
 }
     
 .mnr {
-  position: absolute;     /* posiciona relativamente ao botão */
-  top: 100%;              /* faz o menu aparecer logo abaixo do botão */
+  position: absolute;
+  top: 100%; 
+  left: -30px;
   background: #f1f1f1;
   padding: 10px;
   border-radius: 8px;

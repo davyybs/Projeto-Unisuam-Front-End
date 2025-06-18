@@ -107,8 +107,9 @@ header {
 }
 
 .mnr {
-  position: absolute; /* posiciona relativamente ao botão */
-  top: 100%; /* faz o menu aparecer logo abaixo do botão */
+  position: absolute;
+  top: 100%;
+  left: -30px;
   background: #f1f1f1;
   padding: 10px;
   border-radius: 8px;
@@ -217,10 +218,10 @@ ul {
 }
 
 .linha {
-  flex: 1; /* Faz com que a linha ocupe o espaço disponível */
+  flex: 1;
   height: 8px;
-  background-color: var(--cor-principal); /* Azul escuro */
-  border-radius: 10px; /* Deixa a linha com pontas arredondadas */
+  background-color: var(--cor-texto-titulo);
+  border-radius: 10px;
   margin: 0 15px;
 }
 
@@ -253,7 +254,7 @@ footer {
   color: var(--cor-footer);
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 671px) {
   /* Header */
 
   header {
@@ -420,7 +421,6 @@ footer {
     flex: 1;
     min-width: 30px; /* mínimo visível */
     height: 6px;
-    background-color: var(--cor-texto-titulo);
     border-radius: 10px;
   }
 
@@ -431,6 +431,10 @@ footer {
     font-size: 2em;
     text-align: center;
     padding: 0 0px;
+  }
+
+  #title2 {
+    width: 45%;
   }
 
   h2 {
@@ -446,5 +450,43 @@ footer {
   footer {
     height: 30px;
     font-size: 0.75em;
+  }
+}
+
+@media (min-width: 672px) and (max-width: 1100px) {
+  /* Slogan */
+
+  .slogan {
+    gap: 50px;
+    padding: 50px;
+    height: 350px;
+  }
+
+  .logoSlogan {
+    width: 300px;
+  }
+
+  .sloganPhrase {
+    font-size: 2em;
+    width: 100%;
+  }
+
+  .text {
+    width: 100%;
+    gap: 20px;
+    padding: 30px 0px;
+    background: linear-gradient(
+      to bottom,
+      var(--cor-secundária) 0%,
+      var(--cor-fundo) 4.5%
+    );
+  }
+
+  .textPadding {
+    padding: 5px 130px;
+  }
+
+  footer {
+    height: 40px;
   }
 }
