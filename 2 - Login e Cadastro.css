@@ -106,7 +106,7 @@ header {
 
 .mnr {
   position: absolute;
-  top: 100%; 
+  top: 100%;
   left: -30px;
   background: #f1f1f1;
   padding: 10px;
@@ -386,7 +386,7 @@ select {
   /* Login Box */
 
   .container {
-    width: 335px;
+    width: 355px;
     height: 430px;
     border-radius: 35px;
   }
@@ -443,7 +443,7 @@ select {
   /* Cadastro */
 
   .containerCad {
-    width: 340px;
+    width: 355px;
     height: 450px;
     border-radius: 35px;
   }
@@ -453,7 +453,7 @@ select {
   }
 
   .cadBox {
-    width: 130px;
+    width: 140px;
     height: 28px;
     border-style: none;
     border-radius: 10px;
