@@ -1,19 +1,22 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="Imagens/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="9-SMS Programável.css" />
     <title>Core Connect</title>
+    <link rel="stylesheet" href="9-SMS Programável.css" />
   </head>
   <body>
     <header>
       <div class="logo">
         <a href="index.html"
-          ><img src="Imagens/logo1.png" alt="logo CoreConnect"
+          ><img src="imagens/logo1.png" width="200" alt=""
         /></a>
       </div>
+
+      <div class="btn-abrir-menu" id="btn-menu">
+        <img src="Imagens/menu_256dp_FFFFFF_FILL0_wght300_GRAD0_opsz48.png" alt="Menu" />
+      </div>
+
       <div class="menu">
         <nav>
           <ul>
@@ -22,13 +25,44 @@
             <a href="3 - Login.html"><li>Login</li></a>
           </ul>
         </nav>
-        <img src="Imagens/imagenoite.png" alt="modo escuro"/>
+
+        <div class="aumentarfonte">
+          <button onclick="toggleControles()">
+            <img src="Imagens/search-nav.png" alt="Aumentar Fonte" />
+          </button>
+          <div id="mnr-fonte" class="mnr" style="display: none">
+            <button onclick="alterarFonte(2)">+</button>
+            <button onclick="alterarFonte(-2)">-</button>
+            <button onclick="resetarFonte()">Resetar</button>
+          </div>
+        </div>
+        <img
+          src="imagens/imagenoite.png"
+          id="darkmode"
+          class="dark"
+          alt="Modo Escuro"
+        />
       </div>
+
+      <div class="menu-mobile" id="menu-mobile">
+        <div class="fechar" id="fechar">
+          <img src="Imagens/close_256dp_FFFFFF_FILL0_wght300_GRAD0_opsz48.png" alt="Fechar" />
+        </div>
+        <nav>
+          <ul>
+            <a href="4 - Sobre Nós.html"><li>Sobre Nós</li></a>
+            <a href="2 - Cadastro.html"><li>Cadastre-se</li></a>
+            <a href="3 - Login.html"><li>Login</li></a>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="overlay-menu" id="overlay-menu"></div>
     </header>
     <div class="container">
       <div class="titulo2">
         <h1>SMS Programável</h1>
-        <img src="Imagens/chat-bubbles.png" alt="" />
+        <img src="imagens/chat-bubbles.png" alt="" />
       </div>
       <div>
         <h3 class="titulo">O que é?</h3>
@@ -52,7 +86,7 @@
           </p>
         </div>
 
-        <img src="Imagens/smscell.png" width="200" alt="" />
+        <img src="imagens/smscell.png" width="200" alt="" />
       </div>
       <h3 class="strong">
         SMS é a forma mais rápida, eficiente e de baixo custo para se comunicar
@@ -84,7 +118,7 @@
         compra.
       </div>
       <div class="smsgrafico1">
-        <img src="Imagens/smsgrafico1.png" width="500" alt="" />
+        <img src="imagens/smsgrafico1.png" width="500" alt="" />
       </div>
       <div>
         <h3 class="titulo">Benefícios</h3>
@@ -102,17 +136,25 @@
           <li>Acompanhamento de métricas e relatórios.</li>
         </ul>
 
-        <img src="Imagens/smsgrafico2.png" width="200" alt="" />
+        <img src="imagens/smsgrafico2.png" width="200" alt="" />
       </div>
       <div>
         <h3 class="titulo">Usos</h3>
         São muitos os caso de uso, mas veja alguns exemplos:
       </div>
       <div class="usos">
-        <img src="Imagens/smscelulares.png" width="200" alt="" />
+        <img
+          id="imagemModo"
+          src="imagens/smscelulares.png"
+          width="200"
+          alt=""
+        />
       </div>
     </div>
 
     <footer>© 2025 CoreConnect. All rights reserved.</footer>
+    <script src="js/darkmode.js"></script>
+    <script src="js/font.js"></script>
+    <script src="js/menu_mobile.js"></script>
   </body>
 </html>

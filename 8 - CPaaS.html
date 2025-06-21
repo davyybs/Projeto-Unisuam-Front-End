@@ -1,20 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="Imagens/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="8-CPaaS.css" />
     <title>Core Connect</title>
+    <link rel="stylesheet" href="8-CPaaS.css" />
   </head>
   <body>
     <header>
       <div class="logo">
         <a href="index.html"
-          ><img src="Imagens/logo1.png" alt="logo CoreConnect"
+          ><img src="imagens/logo1.png" width="200" alt=""
         /></a>
       </div>
+
+      <div class="btn-abrir-menu" id="btn-menu">
+        <img
+          src="Imagens/menu_256dp_FFFFFF_FILL0_wght300_GRAD0_opsz48.png"
+          alt="Menu"
+        />
+      </div>
+
       <div class="menu">
         <nav>
           <ul>
@@ -23,14 +29,48 @@
             <a href="3 - Login.html"><li>Login</li></a>
           </ul>
         </nav>
-        <img src="Imagens/imagenoite.png" height="100" width="100" />
+
+        <div class="aumentarfonte">
+          <button onclick="toggleControles()">
+            <img src="Imagens/search-nav.png" alt="Aumentar Fonte" />
+          </button>
+          <div id="mnr-fonte" class="mnr" style="display: none">
+            <button onclick="alterarFonte(2)">+</button>
+            <button onclick="alterarFonte(-2)">-</button>
+            <button onclick="resetarFonte()">Resetar</button>
+          </div>
+        </div>
+        <img
+          src="imagens/imagenoite.png"
+          id="darkmode"
+          class="dark"
+          alt="Modo Escuro"
+        />
       </div>
+
+      <div class="menu-mobile" id="menu-mobile">
+        <div class="fechar" id="fechar">
+          <img
+            src="Imagens/close_256dp_FFFFFF_FILL0_wght300_GRAD0_opsz48.png"
+            alt="Fechar"
+          />
+        </div>
+        <nav>
+          <ul>
+            <a href="4 - Sobre Nós.html"><li>Sobre Nós</li></a>
+            <a href="2 - Cadastro.html"><li>Cadastre-se</li></a>
+            <a href="3 - Login.html"><li>Login</li></a>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="overlay-menu" id="overlay-menu"></div>
     </header>
 
     <div class="container">
       <div class="titulo2">
         <h1>CPaas</h1>
-        <img src="Imagens/nuvemcpaas.png" width="200" alt="" />
+        <img src="imagens/nuvemcpaas.png" width="200" alt="" />
       </div>
       <div class="titulo">
         <h3>O que é?</h3>
@@ -56,7 +96,7 @@
             hardware ou software adicional.
           </p>
         </div>
-        <img src="Imagens/graficocpaas.png" alt="" />
+        <img src="imagens/graficocpaas.png" alt="" />
       </div>
 
       <div class="titulo">
@@ -79,14 +119,14 @@
             usuário e aumentam seus resultados.
           </li>
         </ul>
-        <img src="Imagens/imagedecpaas.png" alt="" />
+        <img src="imagens/imagedecpaas.png" alt="" />
       </div>
       <div class="titulo">
         <h3>Usos</h3>
       </div>
       <div class="usos">
         <div class="uso">
-          <img src="Imagens/caixacpaas.png" alt="" />
+          <img src="imagens/caixacpaas.png" alt="" />
           <div class="uso-cor">Logística</div>
           <p>Acesso seguro com 2FA.</p>
           <p>
@@ -97,7 +137,7 @@
         </div>
 
         <div class="uso">
-          <img src="Imagens/cartcpaas.png" alt="" />
+          <img src="imagens/cartcpaas.png" alt="" />
           <div class="uso-cor">Varejo</div>
           <p>Compra segura com 2FA.</p>
           <p>Avisos sobre compras e entregas.</p>
@@ -107,7 +147,7 @@
         </div>
 
         <div class="uso">
-          <img src="Imagens/mulhercpaas.png" alt="" />
+          <img src="imagens/mulhercpaas.png" alt="" />
           <div class="uso-cor">Call Center</div>
           <p>
             Melhore taxas de abertura utilizando alertas SMS para confirmações.
@@ -120,7 +160,7 @@
         </div>
 
         <div class="uso">
-          <img src="Imagens/coracaocpaas.png" alt="" />
+          <img src="imagens/coracaocpaas.png" alt="" />
           <div class="uso-cor">Saude</div>
           <p>Acesso seguro com 2FA.</p>
           <p>Melhore o agendamento e reduza faltas com lembretes por SMS.</p>
@@ -134,10 +174,13 @@
 
       <div class="exemplo1">
         <div class="exemplo2">
-          <img src="Imagens/cpaas.png" alt="" />
+          <img src="imagens/cpaas.png" alt="" />
         </div>
       </div>
     </div>
     <footer>© 2025 CoreConnect. All rights reserved.</footer>
+    <script src="js/darkmode.js"></script>
+    <script src="js/font.js"></script>
+    <script src="js/menu_mobile.js"></script>
   </body>
 </html>

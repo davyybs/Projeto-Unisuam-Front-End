@@ -1,37 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="Imagens/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="8-CPaaS.css" />
     <title>Core Connect</title>
+    <link rel="stylesheet" href="6-Google verified calls.css" />
   </head>
   <body>
     <header>
       <div class="logo">
         <a href="index.html"
-          ><img src="Imagens/logo1.png" alt="logo CoreConnect"
+          ><img src="imagens/logo1.png" width="200" alt=""
         /></a>
+      </div>
+
+      <div class="btn-abrir-menu" id="btn-menu">
+        <img
+          src="Imagens/menu_256dp_FFFFFF_FILL0_wght300_GRAD0_opsz48.png"
+          alt="Menu"
+        />
       </div>
 
       <div class="menu">
         <nav>
           <ul>
-            <a href="4Sobrenos.html"><li>Sobre Nós</li></a>
-            <a href="2Cadastro.html"><li>Cadastre-se</li></a>
-            <a href="3Login.html"><li>Login</li></a>
+            <a href="4 - Sobre Nós.html"><li>Sobre Nós</li></a>
+            <a href="2 - Cadastro.html"><li>Cadastre-se</li></a>
+            <a href="3 - Login.html"><li>Login</li></a>
           </ul>
         </nav>
-        <img src="Imagens/imagenoite.png" height="100" width="100" />
+
+        <div class="aumentarfonte">
+          <button onclick="toggleControles()">
+            <img src="Imagens/search-nav.png" alt="Aumentar Fonte" />
+          </button>
+          <div id="mnr-fonte" class="mnr" style="display: none">
+            <button onclick="alterarFonte(2)">+</button>
+            <button onclick="alterarFonte(-2)">-</button>
+            <button onclick="resetarFonte()">Resetar</button>
+          </div>
+        </div>
+        <img
+          src="imagens/imagenoite.png"
+          id="darkmode"
+          class="dark"
+          alt="Modo Escuro"
+        />
       </div>
+
+      <div class="menu-mobile" id="menu-mobile">
+        <div class="fechar" id="fechar">
+          <img
+            src="Imagens/close_256dp_FFFFFF_FILL0_wght300_GRAD0_opsz48.png"
+            alt="Fechar"
+          />
+        </div>
+        <nav>
+          <ul>
+            <a href="4 - Sobre Nós.html"><li>Sobre Nós</li></a>
+            <a href="2 - Cadastro.html"><li>Cadastre-se</li></a>
+            <a href="3 - Login.html"><li>Login</li></a>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="overlay-menu" id="overlay-menu"></div>
     </header>
 
     <div class="container">
       <div class="titulo2">
         <h1>Google Verified Calls</h1>
-        <img src="Imagens/telefonegvc.png" width="200" alt="" />
+        <img src="imagens/telefonegvc.png" width="200" alt="" />
       </div>
 
       <h3 class="titulo">O Problema</h3>
@@ -49,7 +88,7 @@
           </li>
           <li>O brasileiro recebe em média 49,9 ligações de spam por mês.</li>
         </ul>
-        <img src="Imagens/graficopizzagvc.png" width="200" alt="" />
+        <img src="imagens/graficopizzagvc.png" width="200" alt="" />
       </div>
 
       <h3 class="titulo">O que é?</h3>
@@ -68,7 +107,7 @@
             esse recurso do Google.
           </p>
         </div>
-        <img src="Imagens/cellduplogvc.png" width="200" alt="" />
+        <img src="imagens/cellduplogvc.png" width="200" alt="" />
       </div>
 
       <h3 class="titulo">Compatibilidade</h3>
@@ -88,21 +127,21 @@
             de 86% do mercado de sistema operacional móvel no país.
           </li>
         </ul>
-        <img src="Imagens/androidgvc.png" width="200" alt="" />
+        <img src="imagens/androidgvc.png" width="200" alt="" />
       </div>
 
       <h3 class="titulo">Como Funciona?</h3>
 
       <div class="como_funciona">
         <div class="item">
-          <img src="Imagens/mulhergvc.png" width="200" alt="" />
+          <img src="imagens/mulhergvc.png" width="200" alt="" />
           <p>
             Uma chamada telefônica de uma empresa assinante é feita para um
             cliente potencial ou existente.
           </p>
         </div>
         <div class="item">
-          <img src="Imagens/confgvc.png" width="200" alt="" />
+          <img src="imagens/confgvc.png" width="200" alt="" />
           <p>
             Em nanossegundos, a solicitação é encaminhada para a plataforma da
             Telecall que processa a chamada e adiciona as informações
@@ -110,7 +149,7 @@
           </p>
         </div>
         <div class="item">
-          <img src="Imagens/celulargvc.png" width="200" alt="" />
+          <img src="imagens/celulargvc.png" width="200" alt="" />
           <p>
             As informações aparecem na tela do celular do recipiente que
             atenderá a ligação com uma chamada de voz normal.
@@ -149,8 +188,8 @@
         </ul>
 
         <div class="imagens_beneficios">
-          <img src="Imagens/graficogvc.png" width="200" alt="" />
-          <img src="Imagens/lucrosgvc.png" width="200" alt="" />
+          <img src="imagens/graficogvc.png" width="200" alt="" />
+          <img src="imagens/lucrosgvc.png" width="200" alt="" />
         </div>
       </div>
 
@@ -163,10 +202,13 @@
           <li>Avisos sobre agendamentos, exames e resultados.</li>
           <li>Oferecer uma melhor experiência de vendas e promoções.</li>
         </ul>
-        <img src="Imagens/aviaogvc.png" width="200" alt="" />
+        <img src="imagens/aviaogvc.png" width="200" alt="" />
       </div>
     </div>
 
     <footer>© 2025 CoreConnect. All rights reserved.</footer>
+    <script src="js/darkmode.js"></script>
+    <script src="js/font.js"></script>
+    <script src="js/menu_mobile.js"></script>
   </body>
 </html>
