@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=7" />
@@ -10,9 +10,9 @@
   </head>
   <body>
     <header>
-      <a href="index.html"
-        ><img src="Imagens/logo1.png" class="logo" alt="logo CoreConnect"
-      /></a>
+      <a href="index.html">
+        <img src="Imagens/logo1.png" class="logo" alt="logo CoreConnect" />
+      </a>
       <div class="buttons">
         <div class="aumentarfonte">
           <button onclick="toggleControles()" class="btn-fonte">
@@ -37,51 +37,94 @@
         </button>
       </div>
     </header>
+
     <main>
       <div class="containerCad">
         <div class="titleCad">
           <h1>Cadastre-se</h1>
         </div>
-        <form action="">
+        <form>
           <div class="cad">
-            <input type="text" placeholder="Nome Completo" class="cadBox" />
-            <input type="text" placeholder="Nome Materno" class="cadBox" />
-            <label>
-              <input
-                type="text"
-                placeholder="Data de Nascimento"
-                class="cadBox"
-                oninput="formatarData(this)"
-                maxlength="10"
-              />
-            </label>
-            <select class="cadBox" required>
+            <input
+              type="text"
+              name="nome"
+              placeholder="Nome Completo"
+              class="cadBox"
+            />
+            <input
+              type="text"
+              name="materno"
+              placeholder="Nome Materno"
+              class="cadBox"
+            />
+            <input
+              type="text"
+              name="data"
+              placeholder="Data de Nascimento"
+              class="cadBox"
+              oninput="formatarData(this)"
+              maxlength="10"
+            />
+            <select name="sexo" class="cadBox" required>
               <option value="" disabled selected hidden>Sexo</option>
               <option value="1">Masculino</option>
               <option value="2">Feminino</option>
               <option value="3">Prefiro não Informar</option>
             </select>
-            <input type="text" placeholder="CPF" class="cadBox" />
-            <input type="text" placeholder="Telefone Celular" class="cadBox" />
-            <input type="text" placeholder="Email" class="cadBox" />
-            <input type="text" placeholder="Telefone Fixo" class="cadBox" />
-            <input type="password" placeholder="Senha" class="cadBox" />
+            <input type="text" name="cpf" placeholder="CPF" class="cadBox" />
+            <input
+              type="text"
+              name="celular"
+              placeholder="Telefone Celular"
+              class="cadBox"
+              oninput="formatarTelefone(this)"
+              maxlength="17"
+            />
+
+            <input
+              type="text"
+              name="email"
+              placeholder="Email"
+              class="cadBox"
+            />
+            <input
+              type="text"
+              name="fixo"
+              placeholder="Telefone Fixo"
+              class="cadBox"
+              oninput="formatarTelefone(this)"
+              maxlength="17"
+            />
             <input
               type="password"
+              name="senha"
+              placeholder="Senha"
+              class="cadBox"
+            />
+            <input
+              type="password"
+              name="confirmarSenha"
               placeholder="Confirmar Senha"
               class="cadBox"
             />
           </div>
+
+          <div class="submit">
+            <input type="submit" value="Enviar" class="submitBoxCad" />
+          </div>
+          
+          <div class="cadastro">
+            <span>Já Possui uma Conta?</span>
+            <a href="3 - Login.html" class="cadastre-se">Faça Login</a>
+          </div>
         </form>
-        <div class="submit">
-          <input type="submit" value="Enviar" class="submitBoxCad" />
-        </div>
-        <div class="cadastro">
-          <span>Já Possui uma Conta?</span>
-          <a href="3 - Login.html" class="cadastre-se">Faça Login</a>
+        <div id="overlayMensagem" class="overlay-mensagem">
+          <div id="mensagem" class="mensagem"></div>
         </div>
       </div>
     </main>
+
+    <!-- Scripts -->
     <script src="js/darkmode.js"></script>
     <script src="js/font.js"></script>
     <script src="js/cadastro.js"></script>

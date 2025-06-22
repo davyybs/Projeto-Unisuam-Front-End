@@ -377,6 +377,62 @@ select {
   cursor: pointer;
 }
 
+/* Overlay que cobre tudo com fundo desfocado */
+.overlay-mensagem {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.25); /* leve escurecimento */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  visibility: hidden; /* começa escondido */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Quando ativar a classe visível */
+.overlay-mensagem.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Caixa da mensagem dentro do overlay */
+.mensagem {
+  background-color: white;
+  padding: 25px 30px;
+  border-radius: 12px;
+  max-width: 380px;
+  width: 90vw;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  font-weight: 600;
+  font-size: 16px;
+  white-space: pre-line;
+  word-wrap: break-word;
+  text-align: center;
+  cursor: default;
+  user-select: none;
+}
+
+/* Cores para erro */
+.mensagem.erro {
+  border: 2px solid #f5c2c7;
+  background-color: #f8d7da;
+  color: #842029;
+}
+
+/* Cores para sucesso */
+.mensagem.sucesso {
+  border: 2px solid #badbcc;
+  background-color: #d1e7dd;
+  color: #0f5132;
+}
+
+
 @media screen and (max-width: 767px) {
   /* Header */
 
