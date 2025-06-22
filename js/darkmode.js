@@ -38,9 +38,9 @@ function trocarImagem(escuro) {
   const imagem = document.getElementById('imagemModo');
   if (imagem) {
     if (escuro) {
-      imagem.src = 'imagens/smscelularesb.png';
+      imagem.src = 'Imagens/smscelularesb.png';
     } else {
-      imagem.src = 'imagens/smscelulares.png'; 
+      imagem.src = 'Imagens/smscelulares.png'; 
     }
   }
 }
