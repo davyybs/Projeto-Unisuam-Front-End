@@ -49,10 +49,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (email === dadosSalvos.email && senha === dadosSalvos.senha) {
+      // Salvando nome e imagem (se quiser adicionar imagem depois)
+      const usuarioLogado = {
+        nome: dadosSalvos.nome,
+        imagem: null // ou uma URL se tiver imagem de perfil
+      };
+
+      localStorage.setItem("usuarioLogado", JSON.stringify(usuarioLogado));
+
       mostrarMensagem("Login realizado com sucesso!", "sucesso");
-      // Redirecionar para a página principal após o login
+
+      // Redireciona após pequeno delay
       setTimeout(() => {
-        window.location.href = "index.html"; // ou a página desejada
+        window.location.href = "index.html";
       }, 2000);
     } else {
       mostrarMensagem("Email ou senha incorretos.", "erro");

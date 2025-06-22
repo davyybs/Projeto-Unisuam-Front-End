@@ -1,29 +1,42 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const usuario = JSON.parse(localStorage.getItem("usuarioLogado"));
+document.addEventListener("DOMContentLoaded", function () {
+  const usuarioLogado = JSON.parse(localStorage.getItem("usuarioLogado"));
+  const navMain = document.querySelector(".nav-main ul");
+  const perfilContainer = document.getElementById("perfil-container");
+  const perfilNome = document.getElementById("perfil-nome");
+  const perfilImg = document.getElementById("perfil-img");
+  const perfilBtn = document.getElementById("perfil-btn");
+  const menuPerfil = document.getElementById("menu-perfil");
+  const logoutBtn = document.getElementById("logout-btn");
 
-  if (usuario && usuario.nome) {
-    const primeiroNome = usuario.nome.split(" ")[0];
-    const navMenu = document.getElementById("navMenu");
-    const usuarioLogado = document.getElementById("usuarioLogado");
+  if (usuarioLogado) {
+    // Oculta botões de login e cadastro
+    navMain.innerHTML = "";
 
-    navMenu.style.display = "none";
-    usuarioLogado.style.display = "flex";
+    // Mostra botão com nome e imagem
+    const primeiroNome = usuarioLogado.nome.split(" ")[0];
+    perfilNome.textContent = primeiroNome;
+    if (usuarioLogado.imagem) {
+      perfilImg.src = usuarioLogado.imagem;
+    }
 
-    usuarioLogado.innerHTML = `
-      <div style="display: flex; align-items: center; gap: 10px;">
-        <img src="${usuario.imagem || "Imagens/default-perfil.png"}"
-             alt="Perfil"
-             style="width: 38px; height: 38px; border-radius: 50%; object-fit: cover;" />
-        <span style="color: var(--cor-texto-1); font-weight: 600;">${primeiroNome}</span>
-        <button onclick="logout()" style="margin-left: 10px; padding: 6px 12px; border-radius: 8px; border: none; background: var(--cor-principal); color: white; cursor: pointer;">
-          Sair
-        </button>
-      </div>
-    `;
+    perfilContainer.style.display = "block";
+
+    // Toggle do menu de perfil
+    perfilBtn.addEventListener("click", () => {
+      menuPerfil.style.display = menuPerfil.style.display === "block" ? "none" : "block";
+    });
+
+    // Logout
+    logoutBtn.addEventListener("click", () => {
+      localStorage.removeItem("usuarioLogado");
+      window.location.reload(); // ou redirecionar
+    });
+
+    // Fecha menu se clicar fora
+    document.addEventListener("click", function (e) {
+      if (!perfilContainer.contains(e.target)) {
+        menuPerfil.style.display = "none";
+      }
+    });
   }
 });
-
-function logout() {
-  localStorage.removeItem("usuarioLogado");
-  window.location.reload();
-}

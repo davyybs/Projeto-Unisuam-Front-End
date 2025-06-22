@@ -19,8 +19,8 @@
           />
         </a>
       </div>
-      <div class="navHeader">
-        <nav class="nav-main">
+      <div class="navHeader" id="navHeader">
+        <nav class="nav-main" id="navMenu">
           <ul>
             <a href="4 - Sobre Nós.html"><li class="liHeader">Sobre Nós</li></a>
             <a href="2 - Cadastro.html"
@@ -29,6 +29,11 @@
             <a href="3 - Login.html"><li class="liHeader">Login</li></a>
           </ul>
         </nav>
+
+        <!-- Botão de Perfil do Usuário (inicialmente escondido) -->
+        
+
+        <!-- Controles de fonte e modo escuro -->
         <div class="aumentarfonte">
           <button onclick="toggleControles()">
             <img src="Imagens/search-nav.png" alt="" class="search-nav" />
@@ -39,6 +44,7 @@
             <button onclick="resetarFonte()">Resetar</button>
           </div>
         </div>
+
         <button id="darkmode">
           <img
             src="Imagens/imagenoite.png"
@@ -46,6 +52,22 @@
             alt="modo escuro"
           />
         </button>
+
+        <div
+          id="perfil-container"
+          class="perfil-container"
+          style="display: none"
+        >
+          <button id="perfil-btn" class="perfil-btn">
+            <img id="perfil-img" src="Imagens/user.png" alt="Perfil" />
+            <span id="perfil-nome">Usuário</span>
+          </button>
+          <div id="menu-perfil" class="menu-perfil">
+            <button id="logout-btn">Sair</button>
+          </div>
+        </div>
+
+        <!-- Menu mobile -->
         <div class="btn-abrir-menu" id="btn-menu">
           <img
             src="Imagens/menu_256dp_FFFFFF_FILL0_wght300_GRAD0_opsz48.png"
@@ -70,6 +92,7 @@
         <div class="overlay-menu" id="overlay-menu"></div>
       </div>
     </header>
+
     <div class="slogan">
       <div class="sloganTitle">
         <h1>CPaaS Soluções</h1>
@@ -160,5 +183,6 @@
     <script src="js/darkmode.js"></script>
     <script src="js/font.js"></script>
     <script src="js/menu_mobile.js" defer></script>
+    <script src="js/loginStatus.js"></script>
   </body>
 </html>
