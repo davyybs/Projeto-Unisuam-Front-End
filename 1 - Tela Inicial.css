@@ -65,6 +65,7 @@ header {
   padding: 25px;
   background-color: var(--cor-principal);
   box-shadow: 0px 4px 30px var(--sombra);
+  z-index: 999999999999;
 }
 
 .logo {
@@ -505,10 +506,6 @@ footer {
   }
 
   .nav-main {
-    display: none;
-  }
-
-  .aumentarfonte {
     display: none;
   }
 

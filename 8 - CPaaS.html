@@ -7,32 +7,29 @@
     <link rel="stylesheet" href="8-CPaaS.css" />
   </head>
   <body>
-    <header>
+     <header>
       <div class="logo">
-        <a href="index.html"
-          ><img src="Imagens/logo1.png" width="200" alt=""
-        /></a>
+        <a href="index.html">
+          <img
+            src="Imagens/logo1.png"
+            alt="logo CoreConnect"
+            class="logoImage"
+          />
+        </a>
       </div>
-
-      <div class="btn-abrir-menu" id="btn-menu">
-        <img
-          src="Imagens/menu_256dp_FFFFFF_FILL0_wght300_GRAD0_opsz48.png"
-          alt="Menu"
-        />
-      </div>
-
-      <div class="menu">
-        <nav>
+      <div class="navHeader">
+        <nav class="nav-main">
           <ul>
-            <a href="4 - Sobre Nós.html"><li>Sobre Nós</li></a>
-            <a href="2 - Cadastro.html"><li>Cadastre-se</li></a>
-            <a href="3 - Login.html"><li>Login</li></a>
+            <a href="4 - Sobre Nós.html"><li class="liHeader">Sobre Nós</li></a>
+            <a href="2 - Cadastro.html"
+              ><li class="liHeader">Cadastre-se</li></a
+            >
+            <a href="3 - Login.html"><li class="liHeader">Login</li></a>
           </ul>
         </nav>
-
         <div class="aumentarfonte">
           <button onclick="toggleControles()">
-            <img src="Imagens/search-nav.png" alt="Aumentar Fonte" />
+            <img src="Imagens/search-nav.png" alt="" class="search-nav" />
           </button>
           <div id="mnr-fonte" class="mnr" style="display: none">
             <button onclick="alterarFonte(2)">+</button>
@@ -40,33 +37,37 @@
             <button onclick="resetarFonte()">Resetar</button>
           </div>
         </div>
-        <img
-          src="Imagens/imagenoite.png"
-          id="darkmode"
-          class="dark"
-          alt="Modo Escuro"
-        />
-      </div>
-
-      <div class="menu-mobile" id="menu-mobile">
-        <div class="fechar" id="fechar">
+        <button id="darkmode">
           <img
-            src="Imagens/close_256dp_FFFFFF_FILL0_wght300_GRAD0_opsz48.png"
-            alt="Fechar"
+            src="Imagens/imagenoite.png"
+            class="nightMode"
+            alt="modo escuro"
+          />
+        </button>
+        <div class="btn-abrir-menu" id="btn-menu">
+          <img
+            src="Imagens/menu_256dp_FFFFFF_FILL0_wght300_GRAD0_opsz48.png"
+            alt=""
           />
         </div>
-        <nav>
-          <ul>
-            <a href="4 - Sobre Nós.html"><li>Sobre Nós</li></a>
-            <a href="2 - Cadastro.html"><li>Cadastre-se</li></a>
-            <a href="3 - Login.html"><li>Login</li></a>
-          </ul>
-        </nav>
+        <div class="menu-mobile" id="menu-mobile">
+          <div class="fechar" id="fechar">
+            <img
+              src="Imagens/close_256dp_FFFFFF_FILL0_wght300_GRAD0_opsz48.png"
+              alt=""
+            />
+          </div>
+          <nav>
+            <ul>
+              <a href="4 - Sobre Nós.html"><li>Sobre Nós</li></a>
+              <a href="2 - Cadastro.html"><li>Cadastre-se</li></a>
+              <a href="3 - Login.html"><li>Login</li></a>
+            </ul>
+          </nav>
+        </div>
+        <div class="overlay-menu" id="overlay-menu"></div>
       </div>
-
-      <div class="overlay-menu" id="overlay-menu"></div>
     </header>
-
     <div class="container">
       <div class="titulo2">
         <h1>CPaas</h1>
