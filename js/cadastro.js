@@ -59,11 +59,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const form = document.querySelector("form");
     const inputs = document.querySelectorAll(".cadBox");
     const nomeInput = inputs[0];
-    const telefoneCelularInput = inputs[5];
-    const emailInput = inputs[6];
+    const telefoneCelularInput = inputs[6];
+    const emailInput = inputs[8];
     const telefoneFixoInput = inputs[7];
-    const senhaInput = inputs[8];
-    const confirmarSenhaInput = inputs[9];
+    const senhaInput = inputs[9];
+    const confirmarSenhaInput = inputs[10];
     const submitBtn = document.querySelector(".submitBoxCad");
 
     const overlayMensagem = document.getElementById("overlayMensagem");
