@@ -325,11 +325,9 @@ header {
   margin: 14px 0px;
 }
 .qmpu img {
-  width: 300px;
+  width: 200px;
   height: auto;
-  border-radius: 16px;
-  position: relative;
-  bottom: 100px;
+  filter: var(--invert);
 }
 .qmpu_azul {
   color: #4fc3f7;
@@ -536,10 +534,10 @@ footer {
   }
 
   .qmpu img {
-    width: 60%;
+    width: 50%;
     max-width: 280px;
     position: relative;
-    top: -60px;
+    top: -40px;
   }
 
   .qmpu_texto {
