@@ -354,6 +354,11 @@ select {
   color: var(--cor-placeholder);
 }
 
+.csenha {
+  width: 400px;
+  text-align: center;
+}
+
 .date {
   padding-right: 10px;
   color: var(--cor-placeholder);
