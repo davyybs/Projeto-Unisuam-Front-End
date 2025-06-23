@@ -1,4 +1,5 @@
-@font-face {
+
+ @font-face {
   font-family: "Poppins";
   src: url(Fontes/Poppins-Regular.ttf) format("truetype");
   font-weight: 400;
@@ -569,11 +570,19 @@ footer {
     display: none;
   }
 
-  .perfil-btn {
-    display: none;
+  .nightMode {
+    margin-right: 0px;
   }
 
   .perfil-container {
+    display: none;
+  }
+
+  .perfil-container .perfil-btn {
+    display: none;
+  }
+
+  .perfil-container .menu-perfil {
     display: none;
   }
 

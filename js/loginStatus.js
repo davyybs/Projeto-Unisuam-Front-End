@@ -7,12 +7,60 @@ document.addEventListener("DOMContentLoaded", function () {
   const perfilBtn = document.getElementById("perfil-btn");
   const menuPerfil = document.getElementById("menu-perfil");
   const logoutBtn = document.getElementById("logout-btn");
+  const menuMobile = document.querySelector(".menu-mobile nav ul");
+  const nightModeImg = document.querySelector(".nightMode");
+
+  function aplicarEstiloNightMode() {
+    if (usuarioLogado && nightModeImg) {
+      if (window.innerWidth >= 321 && window.innerWidth <= 576) {
+        nightModeImg.style.marginRight = "-20px";
+      } else {
+        nightModeImg.style.marginRight = "";
+      }
+    }
+  }
 
   if (usuarioLogado) {
-    // Oculta botões de login e cadastro
-    navMain.innerHTML = "";
+    // Oculta apenas login e cadastro na versão desktop
+    const desktopLinks = navMain.querySelectorAll("li");
+    desktopLinks.forEach(link => {
+      const texto = link.textContent.trim().toLowerCase();
+      if (texto === "login" || texto === "cadastre-se") {
+        link.style.display = "none";
+      }
+    });
 
-    // Mostra botão com nome e imagem
+    // Oculta login e cadastro no menu mobile
+    const mobileLinks = menuMobile.querySelectorAll("a");
+    mobileLinks.forEach(link => {
+      const texto = link.textContent.trim().toLowerCase();
+      if (texto === "login" || texto === "cadastre-se") {
+        link.style.display = "none";
+      }
+    });
+
+    // Adiciona perfil no menu mobile se ainda não existir
+    if (!document.getElementById("perfil-mobile")) {
+      const primeiroNome = usuarioLogado.nome.split(" ")[0];
+
+      const perfilMobileLi = document.createElement("li");
+      perfilMobileLi.id = "perfil-mobile";
+      perfilMobileLi.style.color = "#ffffff";
+      perfilMobileLi.style.fontWeight = "bold";
+      perfilMobileLi.style.padding = "20px 8%";
+      perfilMobileLi.style.textAlign = "right";
+      perfilMobileLi.style.cursor = "pointer";
+      perfilMobileLi.textContent = primeiroNome + " (Sair)";
+
+      perfilMobileLi.addEventListener("click", () => {
+        localStorage.removeItem("usuarioLogado");
+        window.location.reload();
+      });
+
+      menuMobile.appendChild(perfilMobileLi);
+    }
+
+    // Mostra botão com nome e imagem na versão desktop
     const primeiroNome = usuarioLogado.nome.split(" ")[0];
     perfilNome.textContent = primeiroNome;
     if (usuarioLogado.imagem) {
@@ -26,10 +74,10 @@ document.addEventListener("DOMContentLoaded", function () {
       menuPerfil.style.display = menuPerfil.style.display === "block" ? "none" : "block";
     });
 
-    // Logout
+    // Logout desktop
     logoutBtn.addEventListener("click", () => {
       localStorage.removeItem("usuarioLogado");
-      window.location.reload(); // ou redirecionar
+      window.location.reload();
     });
 
     // Fecha menu se clicar fora
@@ -38,5 +86,8 @@ document.addEventListener("DOMContentLoaded", function () {
         menuPerfil.style.display = "none";
       }
     });
+
+    aplicarEstiloNightMode();
+    window.addEventListener("resize", aplicarEstiloNightMode);
   }
 });

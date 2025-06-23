@@ -516,8 +516,8 @@ select {
   /* Cadastro */
 
   .containerCad {
-    width: 355px;
-    height: 450px;
+    width: 360px;
+    height: 500px;
     border-radius: 35px;
   }
 
@@ -531,6 +531,11 @@ select {
     border-style: none;
     border-radius: 10px;
     font-size: 0.8em;
+  }
+  
+  .csenha {
+    width: 300px;
+    text-align: center;
   }
 
   .date {

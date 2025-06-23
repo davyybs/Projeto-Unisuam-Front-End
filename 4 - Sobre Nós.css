@@ -37,6 +37,9 @@
   --cor-texto-caixa: #4f585d;
   --cor-footer: #90a4ae;
   --cor-overlay: #000000a7;
+  --cor-login: #1d278e;
+  --cor-button-sair: #ffffffd4;
+  --cor-button-sair-hover: rgb(241, 241, 241);
   --fonte-principal: "Poppins", sans-serif;
 }
 
@@ -51,6 +54,9 @@
   --cor-texto-2: #aed3fd;
   --cor-texto-3: #ededed;
   --cor-overlay: #0f172aa7;
+  --cor-login: #15203a;
+  --cor-button-sair: #ffffff10;
+  --cor-button-sair-hover: #ffffff20;
   --cor-icon: invert() grayscale(1);
 }
 
@@ -161,6 +167,60 @@ header {
 .overlay-menu {
   display: none;
 }
+
+.perfil-container {
+  position: relative;
+  margin-left: 5px;
+}
+
+.perfil-btn {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 25px;
+  box-shadow: 4px 4px 20px 10px var(--sombra);
+  background-color: var(--cor-login);
+  color: var(--cor-texto-1);
+  font-weight: bold;
+}
+
+.perfil-btn img {
+  width: 32px;
+  height: 32px;
+}
+
+.menu-perfil {
+  position: absolute;
+  top: 110%;
+  right: 20%;
+  background-color: var(--cor-button-sair);
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  display: none;
+  z-index: 9999;
+}
+
+.menu-perfil button {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--cor-texto-2);
+}
+
+.menu-perfil button:hover {
+  background-color: var(--cor-button-sair-hover);
+  border-radius: 8px;
+}
+
 
 /* Slogan */
 
